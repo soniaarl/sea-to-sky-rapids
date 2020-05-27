@@ -33,44 +33,8 @@ get_header();
 
 <?php
     if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'trip_prep' ) ) {
-            the_field( 'trip_prep' );
-        }
-    }
-
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'getting_here' ) ) {
-            the_field( 'getting_here' );
-        }
-    }
-
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'difficulty_levels' ) ) {
-            the_field( 'difficulty_levels' );
-        }
-    }
-
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'guide_training' ) ) {
-            the_field( 'guide_training' );
-        }
-    }
-
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'rafting_safety' ) ) {
-            the_field( 'rafting_safety' );
-        }
-    }
-
-  if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'conditions' ) ) {
-            the_field( 'conditions' );
-        }
-    }
-
-      if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'cancelations' ) ) {
-            the_field( 'cancelations' );
+        if ( get_field( 'faqs' ) ) {
+            the_field( 'faqs' );
         }
     }
 
