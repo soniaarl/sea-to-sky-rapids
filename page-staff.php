@@ -30,14 +30,17 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+		
+		<!--Get Template Part-->
+		<?php get_template_part( 'template-parts/testimonials', 'none' );?>
 
-<?php
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'intro' ) ) {
+		<?php
+    		if ( function_exists ( 'get_field' ) ) {
+        	if ( get_field( 'intro' ) ) {
             the_field( 'intro' );
-        }
-    }
-?>
+        		}
+    		}
+		?>
 
 
 	</main><!-- #main -->
