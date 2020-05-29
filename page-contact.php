@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying the contact page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -14,34 +14,39 @@
 
 get_header();
 ?>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWJ3is5bKLjAPuPJCletV91JgpvXomVW4" type="text/javascript"></script>
 
 	<main id="primary" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post(); ?>
 
-			get_template_part( 'template-parts/content', 'page' );
+			<header class="page-header">
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			</header><!-- .page-header -->
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div><!-- .entry-content -->
 
-		endwhile; // End of the loop.
-		?>
+		<?php endwhile; // End of the loop. 
 
-<?php
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'map' ) ) {
-            the_field( 'map' );
-        }
-    }
-?>
+		the_field('map');
+
+		// if ( function_exists ( 'get_field' ) ) {
+		// 			the_field( 'map' );
+		// 	}
+
+		$location = get_field('location');
+		if( $location ): ?>
+			<div class="acf-map" data-zoom="16">
+				<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+			</div>
+		<?php endif; ?>
 
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
