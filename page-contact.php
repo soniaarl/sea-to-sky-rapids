@@ -34,9 +34,9 @@ get_header();
 
 		the_field('map');
 
-		// if ( function_exists ( 'get_field' ) ) {
-		// 			the_field( 'map' );
-		// 	}
+		if ( function_exists ( 'get_field' ) ) {
+					the_field( 'map' );
+			}
 
 		$location = get_field('location');
 		if( $location ): ?>
