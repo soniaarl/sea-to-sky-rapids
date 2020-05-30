@@ -15,7 +15,22 @@
 		<div class="site-info">
 		<div class="footer-menus">
 			<nav id="footer-navigation" class="footer-navigation">
-        		<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
+				<div class="trip-info">
+					<?php				 
+					echo '<p>Plan your trip</p>';
+					wp_nav_menu( array( 'theme_location' => 'footer') ); 
+					?>
+				</div>
+				<div class="trip-after">
+					<?php 
+					echo '<p>After your trip</p>';
+					?>
+				</div>
+				<div class="footer-contact">
+				<?php 
+				echo '<p>Connect with us</p>';
+				?>
+				</div>
     		</nav>
 			</div>
 		</div><!-- .site-info -->
