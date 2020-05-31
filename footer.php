@@ -29,6 +29,13 @@
 				<div class="footer-contact">
 				<?php 
 				echo '<p>Connect with us</p>';
+				if(is_page()){
+					
+					get_template_part('images/facebook');
+					get_template_part('images/instagram');
+					get_template_part('images/twitter');
+				}
+	
 				?>
 				</div>
     		</nav>
