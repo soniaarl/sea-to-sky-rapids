@@ -153,6 +153,6 @@ get_template_part( 'template-parts/testimonials', 'none' ); ?>
 
 <!-- CTAs -->
 <div class="book-btn"><a href="#wc-bookings-booking-form">Book Now</a></div>
-<div class="book-btn"><a href="'<?php echo esc_url( home_url( '/faq' ) ); ?>'">FAQ</a></div>
+<div class="book-btn"><a href='"<?php echo esc_url( home_url( '/faq' ) ); ?>"'>FAQ</a></div>
 
 <?php
