@@ -24,10 +24,13 @@ if( have_rows('product_summary') ): ?>
 
         <?php endwhile; ?>
     </section> <!-- end product-summary -->
-<?php endif;
+<?php endif;?>
 
-// Product Description
-if( have_rows('product_description') ): ?>
+<!-- Book now CTA -->
+<div class="book-btn"><a href="#wc-bookings-booking-form">Book Now</a></div>
+
+<!-- Product Description -->
+<?php if( have_rows('product_description') ): ?>
     <?php while( have_rows('product_description') ): the_row(); 
 
         // Get sub field values.
@@ -146,4 +149,10 @@ get_template_part( 'template-parts/testimonials', 'none' ); ?>
 
     endwhile; ?>
     </section> <!-- end product-itinerary -->
-<?php endif;
+<?php endif; ?>
+
+<!-- CTAs -->
+<div class="book-btn"><a href="#wc-bookings-booking-form">Book Now</a></div>
+<div class="book-btn"><a href="<?php echo esc_url(get_home_url().'/faq'); ?>">FAQ</a></div>
+
+<?php
