@@ -15,6 +15,14 @@
 get_header();
 ?>
 
+	<?php
+    		if ( function_exists ( 'get_field' ) ) {
+        	if ( get_field( 'intro' ) ) {
+            the_field( 'intro' );
+        		}
+    		}
+	?>
+
 	<main id="primary" class="site-main">
 
 		<?php
@@ -35,12 +43,17 @@ get_header();
 		<?php get_template_part( 'template-parts/testimonials', 'none' );?>
 
 		<?php
-    		if ( function_exists ( 'get_field' ) ) {
-        	if ( get_field( 'intro' ) ) {
-            the_field( 'intro' );
-        		}
-    		}
-		?>
+
+		wp_reset_postdata();
+
+		
+
+
+
+
+		
+
+
 
 
 	</main><!-- #main -->
