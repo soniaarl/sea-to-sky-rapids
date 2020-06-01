@@ -24,6 +24,7 @@
 				<div class="trip-after">
 					<?php 
 					echo '<p>After your trip</p>';
+					echo '<a href="#0">Leave a review</a>'
 					?>
 				</div>
 				<div class="footer-contact">
