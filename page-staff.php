@@ -24,36 +24,42 @@ get_header();
 				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 			</header>
 
+			<p><?php the_content(); ?></p>
+
 		<?php endwhile; ?>
 
-	<!--testimonial-->
-	<?php get_template_part( 'template-parts/testimonials', 'none' ); ?>
 
-	<h2>Meet The Team</h2>
+		<?php get_template_part( 'template-parts/testimonials', 'none' ); ?>
 
-		
+
+		<h2>Meet The Team</h2>
+
+		<?php
+			$args = array (
+				'post_type' => 'sts-staff',
+				'posts_per_page' => -1,
+			);
+			$staff_query = new WP_Query( $args );
+			if ( $staff_query->have_posts() ): ?>
+				<div class="staff-card">
+					<?php while ( $staff_query->have_posts() ):
+						$staff_query->the_post() ?>
+						<h3><?php the_field('staff_name') ?> </h3>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+			 	</div>
+		<?php endif; ?>
+
+
+
+
+
 	
-
-
-		
-	<?php
-		
-	wp_reset_postdata()
-
-	?>
 
 
 	</main>
 
-<?php
 
-		// ACF 
-    	if ( function_exists ( 'get_field' ) ) {
-        	if ( get_field( 'intro' ) ) {
-            the_field( 'intro' );
-        		}
-    		}
-?>
 
 
 <?php

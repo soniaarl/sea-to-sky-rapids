@@ -49,7 +49,7 @@ function sts_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-archive',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array( 'title', 'thumbnail'),
     );
     register_post_type( 'sts-staff', $args );
 
