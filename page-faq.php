@@ -17,28 +17,46 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php while ( have_posts() ) : the_post(); ?>
 
-			get_template_part( 'template-parts/content', 'page' );
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
+<div id="faq">
+	<?php
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+// check if the repeater field has rows of data
+if( have_rows('faqs') ):
 
-		endwhile; // End of the loop.
-		?>
+	while( have_rows('faqs') ): the_row();
+	
+	echo "<h3>";
+	the_sub_field('category');
+	echo "</h3>";
 
-<?php
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'faqs' ) ) {
-            the_field( 'faqs' );
-        }
-    }
+	if( have_rows('questions_answers') ):
 
+	while( have_rows('questions_answers') ): the_row();
+	
+ 	if( get_sub_field('question') && get_sub_field('answer') );
+	
+	echo "<button class='accordion'>";
+	the_sub_field('question');
+	echo "</button>";
+	echo "<p>";
+	
+	the_sub_field('answer');
+	echo "</p>";
+	
+	  
+endwhile;
+endif;
+endwhile;
+endif;
+endwhile;
 ?>
+</div>
+
+
 
 
 	</main><!-- #main -->

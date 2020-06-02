@@ -14,50 +14,48 @@
 
 get_header();
 ?>
-
-	<?php
-    		if ( function_exists ( 'get_field' ) ) {
-        	if ( get_field( 'intro' ) ) {
-            the_field( 'intro' );
-        		}
-    		}
-	?>
-
 	<main id="primary" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post(); ?>
 
-			get_template_part( 'template-parts/content', 'page' );
+			<header class="page-header">
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			</header>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<?php endwhile; ?>
 
-		endwhile; // End of the loop.
-		?>
-		
-		<!--Get Template Part-->
-		<?php get_template_part( 'template-parts/testimonials', 'none' );?>
+	<!--testimonial-->
+	<?php get_template_part( 'template-parts/testimonials', 'none' ); ?>
 
-		<?php
-
-		wp_reset_postdata();
+	<h2>Meet The Team</h2>
 
 		
-
-
+	
 
 
 		
+	<?php
+		
+	wp_reset_postdata()
+
+	?>
 
 
-
-
-	</main><!-- #main -->
+	</main>
 
 <?php
-get_sidebar();
+
+		// ACF 
+    	if ( function_exists ( 'get_field' ) ) {
+        	if ( get_field( 'intro' ) ) {
+            the_field( 'intro' );
+        		}
+    		}
+?>
+
+
+<?php
 get_footer();
+
