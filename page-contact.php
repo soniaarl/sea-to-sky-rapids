@@ -26,16 +26,6 @@ get_header();
 
 		<div class="entry-content">
 			<?php the_content(); ?>
-
-			<?php if ( function_exists ( 'get_field') ) :
-				$location = get_field( 'map' ); ?>
-
-					<div class="acf-map">
-						<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
-					</div><!-- end acf-map -->
-
-			<?php endif; ?>
-
 		</div><!-- .entry-content -->
 
 		<?php endwhile; // End of the loop. ?>
