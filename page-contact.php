@@ -17,6 +17,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
+		the_post_thumbnail( 'full' );
 		while ( have_posts() ) :
 			the_post(); ?>
 
@@ -25,7 +26,12 @@ get_header();
 			</header><!-- .page-header -->
 
 		<div class="entry-content">
-			<?php the_content(); ?>
+			<?php if ( function_exists ( 'get_field') ) :
+				if ( get_field( 'contact_book_online' ) ) :
+					the_field( 'contact_book_online' );
+				endif;
+			endif;
+			the_content(); ?>
 		</div><!-- .entry-content -->
 
 		<?php endwhile; // End of the loop. ?>
