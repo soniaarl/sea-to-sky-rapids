@@ -10,7 +10,7 @@
                 <div class="slider"> <?php
 				while ( $query -> have_posts() ) {
                     $query -> the_post();?>
-                    <div> <?php
+                    <div class="testimonial-container"> <?php
                     the_post_thumbnail();
 					the_content(); ?>
                     </div> <?php
