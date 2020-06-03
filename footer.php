@@ -35,6 +35,8 @@
 					get_template_part('images/facebook');
 					get_template_part('images/instagram');
 					get_template_part('images/twitter');
+					echo the_field('contact_phone', 39);
+					echo the_field('contact_email', 39);
 				}
 	
 				?>
