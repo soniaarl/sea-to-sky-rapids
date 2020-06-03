@@ -13,8 +13,6 @@
 
 get_header();
 
-the_post_thumbnail( 'full' );
-
 if ( function_exists ( 'get_field' ) ) {
 	if ( get_field( 'banner_slogan' ) ) { ?>
 		<h1><?php the_field( 'banner_slogan' ); ?></h1>
