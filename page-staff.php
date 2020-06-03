@@ -44,7 +44,15 @@ get_header();
 				<div class="staff-card">
 					<?php while ( $staff_query->have_posts() ):
 						$staff_query->the_post() ?>
-						<h3><?php the_field('staff_name') ?> </h3>
+						<?php the_post_thumbnail('large'); ?>
+						<h3 class="staff-name"><?php the_title() ?> </h3>
+						<p class="staff-position"><?php the_field('position'); ?> </p>
+						<p class="field-label">Employee Since</p>
+						<p class="staff-employee"><?php the_field('employee_since'); ?> </p>
+						<p class="field-label">Hometown</p>
+						<p class="staff-hometown"><?php the_field('home_town'); ?> </p>
+						<p class="field-label">About</p>
+						<p class="staff-bio"><?php the_field('bio'); ?> </p>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 			 	</div>
