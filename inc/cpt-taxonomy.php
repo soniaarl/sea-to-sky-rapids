@@ -48,7 +48,7 @@ function sts_register_custom_post_types() {
         'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'menu_icon'          => 'dashicons-archive',
+        'menu_icon'          => 'dashicons-businesswoman',
         'supports'           => array( 'title', 'thumbnail'),
     );
     register_post_type( 'sts-staff', $args );
