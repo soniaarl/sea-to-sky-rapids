@@ -26,12 +26,51 @@ get_header();
 			</header><!-- .page-header -->
 
 		<div class="entry-content">
-			<?php if ( function_exists ( 'get_field') ) :
-				if ( get_field( 'contact_book_online' ) ) :
-					the_field( 'contact_book_online' );
+
+			<div class="contact-info-section-one">
+
+				<?php if ( function_exists ( 'get_field') ) :
+
+					if ( get_field( 'contact_book_online' ) ) :
+						get_template_part( 'images/check' );
+						the_field( 'contact_book_online' );
+					endif;
+
+					if ( get_field( 'contact_faq' ) ) :
+						get_template_part( 'images/faq' );
+						the_field( 'contact_faq' );
+					endif;
+
+				endif; ?>
+
+			</div><!-- end contact-info-section-one -->
+
+			
+			<?php the_content(); ?>
+
+			<div class="contact-info-section-two">
+
+				<?php if ( function_exists ( 'get_field') ) :
+
+				if ( get_field( 'contact_email' ) ) :
+					get_template_part( 'images/email' );
+					the_field( 'contact_email' );
 				endif;
-			endif;
-			the_content(); ?>
+
+				if ( get_field( 'contact_phone' ) ) :
+					get_template_part( 'images/phone' );
+					the_field( 'contact_phone' );
+				endif;
+
+				endif; ?>
+
+			</div><!-- end contact-info-section-two -->
+
+			<h2>Connect with us</h2>
+			<?php get_template_part( 'images/instagram' );
+				  get_template_part('images/twitter');
+				  get_template_part('images/facebook');?>
+
 		</div><!-- .entry-content -->
 
 		<?php endwhile; // End of the loop. ?>
