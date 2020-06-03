@@ -13,11 +13,11 @@
  */
 
 get_header();
+the_post_thumbnail( 'full' );
 ?>
 	<main id="primary" class="site-main">
 
 		<?php
-		the_post_thumbnail( 'full' );
 		while ( have_posts() ) :
 			the_post(); ?>
 
@@ -67,9 +67,9 @@ get_header();
 			</div><!-- end contact-info-section-two -->
 
 			<h2>Connect with us</h2>
-			<?php get_template_part( 'images/instagram' );
-				  get_template_part('images/twitter');
-				  get_template_part('images/facebook');?>
+			<a href="https://www.instagram.com/" target="_blank"><?php get_template_part( 'images/instagram' ); ?></a>
+			<a href="https://twitter.com/home/" target="_blank"><?php get_template_part('images/twitter'); ?></a>
+			<a href="https://www.facebook.com/" target="_blank"><?php get_template_part('images/facebook');?></a>
 
 		</div><!-- .entry-content -->
 

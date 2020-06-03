@@ -13,6 +13,7 @@
  */
 
 get_header();
+the_post_thumbnail( 'full' );
 ?>
 
 	<main id="primary" class="site-main">
