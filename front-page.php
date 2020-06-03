@@ -14,16 +14,25 @@
 
 get_header();
 ?>
-	<?php
-    if ( function_exists ( 'get_field' ) ) {
-        if ( get_field( 'banner_slogan' ) ) {
-            the_field( 'banner_slogan' );
-        }
-    }
-?>
+
+<?php
+		if ( function_exists ( 'get_field' ) ) {
+			if ( get_field( 'banner_slogan' ) ) {
+				the_field( 'banner_slogan' );
+				}
+			}
+	?>
+
+	<!-- Book now link -->
+	<?php	
+		echo '<a href="https://seatoskyrapids.bcitwebdeveloper.ca/our-tours/">';
+			echo '<p>  BOOK NOW</p>' ;
+			echo '</a>';
+	?>
 	<main id="primary" class="site-main">
 
-		<?php
+
+	<?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -31,13 +40,16 @@ get_header();
 
 
 		endwhile; // End of the loop.
-		?>
+	?>
 
-		<?php
+
+	<!-- tours grid -->
+
+	<?php
 		$args = array(
-			'post_type'			=>'product',
-				'posts_per_page' => 4
-			); 
+		'post_type'		 =>'product',
+		'posts_per_page' => 4
+		 ); 
 
 		$product_query = new WP_Query($args); 
 		if ($product_query->have_posts()){
@@ -126,7 +138,8 @@ get_header();
 		}// end of while
 		echo '</section>';
 	}//end of if
-		?>
+
+	?>
 				
 	</main><!-- #main -->
 
