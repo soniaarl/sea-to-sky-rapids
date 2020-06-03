@@ -130,7 +130,7 @@ get_header();
 				
 	</main><!-- #main -->
 
-
+	<?php get_template_part( 'template-parts/testimonials', 'none' ); ?>
 
 <?php
 get_footer();

@@ -2,8 +2,8 @@
 
 
 $args = array(
-		'post_type'			=>'product',
-			'posts_per_page' => 4
+		    'post_type'			=>'product',
+			'posts_per_page'    => 4
 		); 
 
 	$product_query = new WP_Query($args); 

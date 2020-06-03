@@ -58,16 +58,12 @@ if ( woocommerce_product_loop() ) {
 
 	woocommerce_product_loop_start();
 
-
-
-
 	/**
  	* our tours elements
  	*/
-require get_template_directory() . './template-parts/content-our-tours.php';
+	 require get_template_directory() . '/template-parts/content-our-tours.php';
 
-	
-	
+	 
 	woocommerce_product_loop_end();
 
 	/**
