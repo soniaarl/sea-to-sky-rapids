@@ -10,7 +10,7 @@
 		<?php while ($product_query->have_posts()) {
 			$product_query->the_post(); ?>
 			
-			<article class="single-tour-preview">
+			<article class="single-tour-preview"><a href="<?php echo get_permalink() ?>">
 			
 				<?php the_post_thumbnail('full'); ?>
 			
@@ -72,7 +72,7 @@
 					</a>
 				</div><!-- end tour-more-info-button -->
 
-			</article><!-- end single-tour-preview -->
+			</a></article><!-- end single-tour-preview -->
 		<?php }// end of while ?>
 
 		</section>
