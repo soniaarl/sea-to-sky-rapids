@@ -12,20 +12,21 @@
  * @package Sea_to_Sky_Rapids
  */
 
-get_header();
-the_post_thumbnail( 'full' );
-?>
+get_header(); ?>
 
-	<main id="primary" class="site-main">
+
+<main id="primary" class="site-main">
+
+	<?php the_post_thumbnail( 'full' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
-<div id="faq">
-	<?php
+		<h1><?php the_title(); ?></h1>
+		<?php the_content(); ?>
 
-// check if the repeater field has rows of data
+	<div id="faq">
+
+<?php // check if the repeater field has rows of data
 if( have_rows('faqs') ):
 
 	while( have_rows('faqs') ): the_row();

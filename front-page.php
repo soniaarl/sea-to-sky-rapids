@@ -11,9 +11,11 @@
  * @package Sea_to_Sky_Rapids
  */
 
-get_header();
+get_header(); ?>
 
-if ( function_exists ( 'get_field' ) ) {
+<main id="primary" class="site-main">
+
+<?php if ( function_exists ( 'get_field' ) ) {
 	if ( get_field( 'banner_slogan' ) ) { ?>
 		<h1><?php the_field( 'banner_slogan' ); ?></h1>
 		<?php }
@@ -24,8 +26,6 @@ if ( function_exists ( 'get_field' ) ) {
 <a href=<?php echo esc_url( home_url( '/our-tours' ) ); ?>>
 	<p class="book-now-button">Book Now</p>
 </a>
-
-<main id="primary" class="site-main">
 
 	<?php
 		while ( have_posts() ) :

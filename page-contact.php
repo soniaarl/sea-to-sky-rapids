@@ -12,70 +12,72 @@
  * @package Sea_to_Sky_Rapids
  */
 
-get_header();
-the_post_thumbnail( 'full' );
-?>
-	<main id="primary" class="site-main">
+get_header(); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post(); ?>
+<main id="primary" class="site-main">
+	<?php the_post_thumbnail( 'full' );
+	?>
 
-			<header class="page-header">
-				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-			</header><!-- .page-header -->
 
-		<div class="entry-content">
+	<?php
+	while ( have_posts() ) :
+		the_post(); ?>
 
-			<div class="contact-info-section-one">
+		<header class="page-header">
+			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+		</header><!-- .page-header -->
 
-				<?php if ( function_exists ( 'get_field') ) :
+	<div class="entry-content">
 
-					if ( get_field( 'contact_book_online' ) ) :
-						get_template_part( 'images/check' );
-						the_field( 'contact_book_online' );
-					endif;
+		<div class="contact-info-section-one">
 
-					if ( get_field( 'contact_faq' ) ) :
-						get_template_part( 'images/faq' );
-						the_field( 'contact_faq' );
-					endif;
+			<?php if ( function_exists ( 'get_field') ) :
 
-				endif; ?>
-
-			</div><!-- end contact-info-section-one -->
-
-			
-			<?php the_content(); ?>
-
-			<div class="contact-info-section-two">
-
-				<?php if ( function_exists ( 'get_field') ) :
-
-				if ( get_field( 'contact_email' ) ) :
-					get_template_part( 'images/email' );
-					the_field( 'contact_email' );
+				if ( get_field( 'contact_book_online' ) ) :
+					get_template_part( 'images/check' );
+					the_field( 'contact_book_online' );
 				endif;
 
-				if ( get_field( 'contact_phone' ) ) :
-					get_template_part( 'images/phone' );
-					the_field( 'contact_phone' );
+				if ( get_field( 'contact_faq' ) ) :
+					get_template_part( 'images/faq' );
+					the_field( 'contact_faq' );
 				endif;
 
-				endif; ?>
+			endif; ?>
 
-			</div><!-- end contact-info-section-two -->
+		</div><!-- end contact-info-section-one -->
 
-			<h2>Connect with us</h2>
-			<a href="https://www.instagram.com/" target="_blank"><?php get_template_part( 'images/instagram' ); ?></a>
-			<a href="https://twitter.com/home/" target="_blank"><?php get_template_part('images/twitter'); ?></a>
-			<a href="https://www.facebook.com/" target="_blank"><?php get_template_part('images/facebook');?></a>
+		
+		<?php the_content(); ?>
 
-		</div><!-- .entry-content -->
+		<div class="contact-info-section-two">
 
-		<?php endwhile; // End of the loop. ?>
+			<?php if ( function_exists ( 'get_field') ) :
 
-	</main><!-- #main -->
+			if ( get_field( 'contact_email' ) ) :
+				get_template_part( 'images/email' );
+				the_field( 'contact_email' );
+			endif;
+
+			if ( get_field( 'contact_phone' ) ) :
+				get_template_part( 'images/phone' );
+				the_field( 'contact_phone' );
+			endif;
+
+			endif; ?>
+
+		</div><!-- end contact-info-section-two -->
+
+		<h2>Connect with us</h2>
+		<a href="https://www.instagram.com/" target="_blank"><?php get_template_part( 'images/instagram' ); ?></a>
+		<a href="https://twitter.com/home/" target="_blank"><?php get_template_part('images/twitter'); ?></a>
+		<a href="https://www.facebook.com/" target="_blank"><?php get_template_part('images/facebook');?></a>
+
+	</div><!-- .entry-content -->
+
+	<?php endwhile; // End of the loop. ?>
+
+</main><!-- #main -->
 
 <?php
 get_footer();
