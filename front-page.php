@@ -13,32 +13,26 @@
 
 get_header(); ?>
 
+<div class="home-banner">
+	<?php if ( function_exists ( 'get_field' ) ) :
+		the_post_thumbnail('full');
+		if ( get_field( 'banner_slogan' ) ) : ?>
+			<h1><?php the_field( 'banner_slogan' ); ?></h1>
+		<?php endif;
+	endif; ?>
+
+	<!-- Book now link -->
+	<a href=<?php echo esc_url( home_url( '/our-tours' ) ); ?>>
+		<p class="book-now-button">Book Now</p>
+	</a>
+</div><!-- end home-banner-->
+
 <main id="primary" class="site-main">
-
-<?php if ( function_exists ( 'get_field' ) ) {
-	if ( get_field( 'banner_slogan' ) ) { ?>
-		<h1><?php the_field( 'banner_slogan' ); ?></h1>
-		<?php }
-	}
-?>
-
-<!-- Book now link -->
-<a href=<?php echo esc_url( home_url( '/our-tours' ) ); ?>>
-	<p class="book-now-button">Book Now</p>
-</a>
-
-	<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			get_template_part ( 'template-parts/content-our-tours', 'none');
-
-			get_template_part( 'template-parts/testimonials', 'none' );
-
-		endwhile; // End of the loop. ?>
-				
+	<?php 
+	the_content();
+	get_template_part ( 'template-parts/content-our-tours', 'none');
+	get_template_part( 'template-parts/testimonials', 'none' ); 
+	?>
 	</main><!-- #main -->
 
 <?php

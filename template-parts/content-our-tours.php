@@ -5,9 +5,9 @@
 		); 
 
 	$product_query = new WP_Query($args); 
-	if ($product_query->have_posts()){ ?>
+	if ($product_query->have_posts() ) : ?>
 		<section class="tours-preview">
-		<?php while ($product_query->have_posts()) {
+		<?php while ($product_query->have_posts() ) :
 			$product_query->the_post(); ?>
 			
 			<article class="single-tour-preview"><a href="<?php echo get_permalink() ?>">
@@ -17,7 +17,7 @@
 				<h2><?php the_title(); ?></h2>
 		
 				<?php // support for ACF
-				if( function_exists( 'get_field' ) ){
+				if( function_exists( 'get_field' ) ) :
 					if( have_rows('product_summary') ):
 						while ( have_rows('product_summary') ) : the_row();
 							if(get_sub_field('duration') ){ ?>
@@ -64,7 +64,7 @@
 
 					endif;
 		
-				}//end of if ?>
+				endif; ?>
 
 				<div class='tour-more-info-button'>
 					<a href="<?php echo get_permalink() ?>">
@@ -73,7 +73,7 @@
 				</div><!-- end tour-more-info-button -->
 
 			</a></article><!-- end single-tour-preview -->
-		<?php }// end of while ?>
+		<?php endwhile; ?>
 
 		</section>
-<?php }//end of if ?>
+	<?php endif; ?>
