@@ -26,7 +26,7 @@ get_header();
 	<p><?php the_content(); ?></p>
 	<?php endwhile; ?>
 
-	<?php get_template_part( 'template-parts/testimonials', 'none' ); ?>
+	<?php get_template_part( 'template-parts/testimonials'); ?>
 
 	<h2>Meet The Team</h2>
 	<?php
