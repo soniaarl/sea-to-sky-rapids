@@ -23,7 +23,7 @@
 							if(get_sub_field('duration') ){ ?>
 								
 								<div class='tour-preview-element sts-tour-duration'>
-									<p><b>Duration: </b><?php the_sub_field( 'duration' ); ?></p>
+									<p><b>Duration: </b><?php the_sub_field( 'duration' ); ?>h</p>
 								</div><!-- end of sts-tour-duration -->
 
 							<?php } // end of duration if
@@ -47,7 +47,7 @@
 							if(get_sub_field('minimum_weight') ){ ?>
 								
 								<div class='tour-preview-element sts-tour-minimum_weight'>
-									<p><b>Minimum Weight: </b><?php the_sub_field( 'minimum_weight' ); ?></p>
+									<p><b>Minimum Weight: </b><?php the_sub_field( 'minimum_weight' ); ?>lbs</p>
 								</div><!-- end of sts-tour-minimum_weight -->
 
 							<?php } // end of minimum_weight if
@@ -55,7 +55,7 @@
 							if(get_sub_field('price') ){ ?>
 								
 								<div class='tour-preview-element sts-tour-price'>
-									<p><b>Price: </b><?php the_sub_field( 'price' ); ?></p>
+									<p><b>Price: </b>$<?php the_sub_field( 'price' ); ?></p>
 								</div><!-- // end of sts-tour-price -->
 
 							<?php } // end of price if
