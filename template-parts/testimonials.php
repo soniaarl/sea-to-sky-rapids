@@ -1,4 +1,5 @@
 <?php 
+
 			$args = array(
 				'post_type' => 'sts-testimonials',
 				'posts_per_page' => -1
