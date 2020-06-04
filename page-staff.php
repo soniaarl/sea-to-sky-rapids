@@ -24,8 +24,7 @@ get_header();
 
 <main id="primary" class="site-main">
 	<p><?php the_content(); ?></p>
-	<?php endwhile; ?>
-
+	
 	<?php get_template_part( 'template-parts/testimonials'); ?>
 
 	<h2>Meet The Team</h2>
@@ -52,6 +51,7 @@ get_header();
 				<?php wp_reset_postdata(); ?>
 			</div>
 		<?php endif; ?>
+		<?php endwhile; ?>
 </main>
 
 <?php
