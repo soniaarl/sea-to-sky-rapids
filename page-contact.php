@@ -13,15 +13,15 @@
 
 get_header(); ?>
 
-<div class="contact-banner">
-	<?php while ( have_posts() ) : the_post(); 
-	the_post_thumbnail( 'full' ); ?>
-	<header class="page-header">
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-	</header><!-- .page-header -->
-</div><!-- end contact-banner -->
-
 <main id="primary" class="site-main">
+
+	<div class="contact-banner">
+		<?php while ( have_posts() ) : the_post(); 
+		the_post_thumbnail( 'full' ); ?>
+		<header class="page-header">
+			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+		</header><!-- .page-header -->
+	</div><!-- end contact-banner -->
 
 	<div class="entry-content">
 

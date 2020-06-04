@@ -14,14 +14,16 @@
 get_header();
 ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<main id="primary" class="site-main">
+
     <div class="who-we-are-banner">
+    <?php while ( have_posts() ) : the_post(); ?>
         <?php the_post_thumbnail( 'full' ); ?>
         <header class="page-header">
             <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
         </header>
     </div><!-- end who-we-are-banner -->
-    <main id="primary" class="site-main">
+
         <?php the_content(); ?>
         <?php get_template_part( 'template-parts/testimonials'); ?>
         

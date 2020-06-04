@@ -13,14 +13,15 @@
 
 get_header(); ?>
 
-<div class="faq-banner">
-	<?php the_post_thumbnail( 'full' ); ?>
-	<h1><?php the_title(); ?></h1>
-</div><!-- end faq-banner -->
-
 <main id="primary" class="site-main">
 
 	<?php while ( have_posts() ) : the_post(); ?>
+
+	<div class="faq-banner">
+		<?php the_post_thumbnail( 'full' ); ?>
+		<h1><?php the_title(); ?></h1>
+	</div><!-- end faq-banner -->
+
 	<?php the_content(); ?>
 	<div id="faq">
 		<?php // check if the repeater field has rows of data
