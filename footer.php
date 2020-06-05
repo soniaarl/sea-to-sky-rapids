@@ -26,9 +26,8 @@
 				<div class="footer-contact">
 					<p>Connect with us</p>
 					<?php if ( is_page() ) : ?>
-						<a href="https://www.facebook.com/" target="_blank"><?php get_template_part('images/facebook'); ?></a>
-						<a href="https://www.instagram.com/" target="_blank"><?php get_template_part('images/instagram'); ?></a>
-						<a href="https://twitter.com/home" target="_blank"><?php get_template_part('images/twitter'); ?></a>
+						<nav id="social-navigation" class="social-navigation"></nav>
+						<?php wp_nav_menu(array('theme_location' => 'social'));	?>
 						<?php echo the_field('contact_phone', 39); 
 						echo the_field('contact_email', 39);
 					endif; ?>
