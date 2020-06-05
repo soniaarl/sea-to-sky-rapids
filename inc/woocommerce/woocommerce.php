@@ -225,3 +225,15 @@ if ( ! function_exists( 'seatosky_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+// Remove catalog ordering
+function seatosky_init(){
+	remove_action('woocommerce_before_shop_loop' , 'woocommerce_catalog_ordering' , 30);
+}
+add_action('init' , 'seatosky_init');
+
+// Remove result count
+function remove_result_count_init(){
+	remove_action('woocommerce_before_shop_loop' , 'woocommerce_result_count' , 20);
+}
+add_action('init' , 'remove_result_count_init');
