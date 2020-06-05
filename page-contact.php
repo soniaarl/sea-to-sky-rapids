@@ -49,25 +49,29 @@ get_header(); ?>
 
 			<?php if ( function_exists ( 'get_field') ) :
 
-			if ( get_field( 'contact_email' ) ) :
-				get_template_part( 'images/email' );
-				the_field( 'contact_email' );
-			endif;
+				if ( get_field( 'contact_email' ) ) :
+					get_template_part( 'images/email' );
+					the_field( 'contact_email' );
+				endif;
 
-			if ( get_field( 'contact_phone' ) ) :
-				get_template_part( 'images/phone' );
-				the_field( 'contact_phone' );
-			endif;
-
-			endif; ?>
+				if ( get_field( 'contact_phone' ) ) :
+					get_template_part( 'images/phone' );
+					the_field( 'contact_phone' );
+				endif; ?>
+			
+			<?php endif; ?>
 
 		</div><!-- end contact-info-section-two -->
 
 		<div class="contact-social">
 		<h2>Connect with us</h2>
-			<a href="https://www.instagram.com/" target="_blank"><?php get_template_part( 'images/instagram' ); ?></a>
-			<a href="https://twitter.com/home/" target="_blank"><?php get_template_part('images/twitter'); ?></a>
-			<a href="https://www.facebook.com/" target="_blank"><?php get_template_part('images/facebook');?></a>
+		<?php if ( have_rows ('social') ) :
+			while( have_rows( 'social' ) ): the_row();
+				if ( get_sub_field( 'social_link' ) && get_sub_field('social_platform') ) : ?>
+					<a href="<?php the_sub_field('social_link') ?>" target="_blank"><?php get_template_part( 'images/'.get_sub_field('social_platform').''); ?></a>
+				<?php endif; ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
 		</div><!-- end contact-social-->
 
 	</div><!-- .entry-content -->
