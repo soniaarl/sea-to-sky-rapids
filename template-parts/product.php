@@ -14,14 +14,17 @@ if(function_exists('get_field')):
                 $price = get_sub_field('price');
 
                 ?>
+               
+                    <ul class="col-01">
+                        <li>Duration: <?php echo $duration ?>h</li>
+                        <li>Difficulty: <?php echo $difficulty ?></li>
+                        <li>Age Range: <?php echo $age_range ?></li>
+                    </ul>
 
-                <ul class="summary-list">
-                <li>Duration: <?php echo $duration ?>h</li>
-                <li>Difficulty: <?php echo $difficulty ?></li>
-                <li>Age Range: <?php echo $age_range ?></li>
-                <li>Minimum Weight: <?php echo $min_weight ?>lbs</li>
-                <li>Price: $<?php echo $price ?></li>
-                </ul>
+                    <ul class="col-02">
+                        <li>Minimum Weight: <?php echo $min_weight ?>lbs</li>
+                        <li>Price: $<?php echo $price ?></li>
+                    </ul>
 
             <?php endwhile; ?>
         </section> <!-- end product-summary -->
@@ -44,17 +47,19 @@ if(function_exists('get_field')):
 
                 <!-- Trip Highlight Repeater Field -->
                 <?php if( have_rows('trip_highlights') ): ?>
-                    <p>Trip Highlights</p>
-                    <ul class="highlights">
-                    <?php while( have_rows('trip_highlights') ): the_row(); 
+                    <section class="highlights">
+                        <p>Trip Highlights</p>
+                        <ul class="highlights">
+                        <?php while( have_rows('trip_highlights') ): the_row(); 
 
-                    // Get sub field values.
-                    $highlight = get_sub_field('one_highlight');?>
-                    
-                    <li><?php echo $highlight?></li>
-                    
-                    <?php endwhile; ?>
-                    </ul>
+                        // Get sub field values.
+                        $highlight = get_sub_field('one_highlight');?>
+                        
+                        <li><?php echo $highlight?></li>
+                        
+                        <?php endwhile; ?>
+                        </ul>
+                    </section>
                 <?php endif; ?> <!-- End trip_highlights -->
 
             <!-- What's Included Group Field -->
@@ -69,30 +74,34 @@ if(function_exists('get_field')):
 
                     <!-- Included Gear -->
                     <?php if( have_rows('included_gear') ): ?>
-                        <p>Gear</p>
-                        <ul class="gear">
-                        <?php while( have_rows('included_gear') ): the_row(); 
+                        <section class="gear">
+                            <p>Gear</p>
+                            <ul class="gear-items">
+                            <?php while( have_rows('included_gear') ): the_row(); 
+                            
+                            $gear = get_sub_field('gear');?>
+            
+                            <li><?php echo $gear?></li>
                         
-                        $gear = get_sub_field('gear');?>
-        
-                        <li><?php echo $gear?></li>
-                    
-                        <?php endwhile; ?>
-                        </ul>
+                            <?php endwhile; ?>
+                            </ul>
+                        </section>
                     <?php endif; ?> <!-- End Included Gear -->
                     
                     <!-- Included Lunch -->
                         <?php if( have_rows('included_lunch') ): ?>
-                        <p>Lunch</p>
-                        <ul class="lunch">
-                        <?php while( have_rows('included_lunch') ): the_row(); 
+                        <section class="lunch">
+                            <p>Lunch</p>
+                            <ul class="lunch-items">
+                            <?php while( have_rows('included_lunch') ): the_row(); 
+                            
+                            $lunch = get_sub_field('lunch_item');?>
+            
+                            <li><?php echo $lunch?></li>
                         
-                        $lunch = get_sub_field('lunch_item');?>
-        
-                        <li><?php echo $lunch?></li>
-                    
-                        <?php endwhile; ?>
-                        </ul>
+                            <?php endwhile; ?>
+                            </ul>
+                        </section>
                     <?php endif; ?> <!-- End Included Lunch -->
                 
                 <?php endwhile; ?>

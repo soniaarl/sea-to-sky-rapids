@@ -84,3 +84,115 @@
 		color: $woocommerce__color-error;
 	}
 }
+
+/* ---------------------------- Custom single-product page styles ---------------------------- */
+.single-product {
+	// Body Styles
+	.summary {
+		padding: 0 15px;
+		ul{
+			margin: 0;
+			padding: 0 0 0 17px;	
+			li {
+				margin: 0;
+			}
+		}
+		h2 {
+			font-size: 25px;
+			color: black;
+			margin-bottom: 10px;
+		}
+	}
+
+	// Product Summary
+	.product-summary {
+		display: flex;
+		justify-content: center;
+		ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}
+		.col-01 {
+			margin-right: 20px;
+		}
+	}
+
+	// Book Now CTA
+	.book-btn {
+		margin: 30px 0;
+		text-align: center;
+		a {
+		text-decoration: none;
+		color: black;
+		font-family: $heading_font;
+		font-size: 25px;
+		background-color: $yellow;
+		display: block;
+		padding: 5px;
+		width: 100%;
+		margin: auto;
+		}
+	}
+
+	// List Styles
+	.highlights, .gear, .lunch, .morning-trip, .afternoon-trip {
+		p {
+			margin-bottom: 5px;
+		}
+	}
+
+	.morning-trip, .afternoon-trip {
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		hr {
+			margin: 5px 0;
+			width: 1px;
+			height: 50px;
+			background-color:black;
+		}
+		.vertical-line:last-child {
+			display: none;
+		}
+	}
+
+	// Calendar/Cart Styles
+	.wc-bookings-booking-form {
+		padding: 5px;
+		margin-top: 30px;
+		fieldset {
+			padding: 0;
+		}
+	}
+	.wc-bookings-booking-form fieldset .picker .hasDatepicker {
+		margin-bottom: 0;
+	}
+
+	// Book Now Button
+	.wc-bookings-booking-form-button {
+		font-family: $heading_font;
+		background-color: $yellow;
+		width: 100%;
+		font-size: 25px;
+		border: none;
+		border-radius: 0;
+	}
+
+	// FAQ Button
+	.faq-btn {
+		margin: 15px;	
+		a {
+			text-decoration: none;
+			font-family: $heading_font;
+			color: black;
+			background-color: $light_blue;
+			font-size: 25px;
+			display: block;
+			padding: 7px;
+			text-align: center;
+		}
+	}
+
+}
