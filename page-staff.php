@@ -13,11 +13,11 @@
 
 get_header();
 ?>
-
+<?php while ( have_posts() ) : the_post(); ?>
 <main id="primary" class="site-main">
 
     <div class="who-we-are-banner">
-    <?php while ( have_posts() ) : the_post(); ?>
+    
         <?php the_post_thumbnail( 'full' ); ?>
         <header class="page-header">
             <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
@@ -39,14 +39,16 @@ get_header();
                     <?php while ( $staff_query->have_posts() ):
                         $staff_query->the_post() ?>
                         <?php the_post_thumbnail('large'); ?>
-                        <h3 class="staff-name"><?php the_title() ?> </h3>
-                        <p class="staff-position"><?php the_field('position'); ?> </p>
-                        <p class="field-label">Employee Since</p>
-                        <p class="staff-employee"><?php the_field('employee_since'); ?> </p>
-                        <p class="field-label">Hometown</p>
-                        <p class="staff-hometown"><?php the_field('home_town'); ?> </p>
-                        <p class="field-label">About</p>
-                        <p class="staff-bio"><?php the_field('bio'); ?> </p>
+                        <?php if (function_exists('the_field')) : ?>
+                            <h3 class="staff-name"><?php the_title() ?> </h3>
+                            <p class="staff-position"><?php the_field('position'); ?> </p>
+                            <p class="field-label">Employee Since</p>
+                            <p class="staff-employee"><?php the_field('employee_since'); ?> </p>
+                            <p class="field-label">Hometown</p>
+                            <p class="staff-hometown"><?php the_field('home_town'); ?> </p>
+                            <p class="field-label">About</p>
+                            <p class="staff-bio"><?php the_field('bio'); ?> </p>
+                        <?php endif; ?>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
                 </div>

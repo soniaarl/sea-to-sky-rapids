@@ -58,7 +58,7 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
 
-	woocommerce_product_loop_start();
+	// woocommerce_product_loop_start();
 
 	/**
  	* our tours elements
@@ -66,7 +66,7 @@ if ( woocommerce_product_loop() ) {
 	 require get_template_directory() . '/template-parts/content-our-tours.php';
 
 	 
-	woocommerce_product_loop_end();
+	// woocommerce_product_loop_end();
 
 	/**
 	 * Hook: woocommerce_after_shop_loop.
