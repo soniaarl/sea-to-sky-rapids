@@ -40,3 +40,9 @@ $body_font: 'FuturaPT';
 p {
     font-family: $body_font;
 }
+
+// List Fonts
+
+ul li {
+    font-family: $body_font;
+}
