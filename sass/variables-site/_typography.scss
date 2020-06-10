@@ -5,3 +5,38 @@ $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+// Headings Fonts
+
+@font-face {
+    font-family: 'American-Captain';
+    src: url('fonts/American-Captain.otf'),
+         url('fonts/American-Captain.ttf')
+}
+
+$heading_font: 'American-Captain';
+
+h1, h2, h3, h4 {
+    font-family: $heading_font;
+}
+
+h1, h2, h3, h4{
+    letter-spacing: 4px;
+}
+
+.single-tour-preview h2 {
+    letter-spacing: 1px;
+}
+
+// Body Fonts 
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('fonts/FuturaPTBook.otf')
+}
+
+$body_font: 'FuturaPT';
+
+p {
+    font-family: $body_font;
+}
