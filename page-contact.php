@@ -27,19 +27,25 @@ get_header(); ?>
 
 		<div class="contact-info-section-one">
 
-			<?php if ( function_exists ( 'get_field') ) :
+			<?php if ( function_exists ( 'get_field') ) : ?>
 
-				if ( get_field( 'contact_book_online' ) ) :
-					get_template_part( 'images/check' );
-					the_field( 'contact_book_online' );
-				endif;
+				<div class="contact-book-online">
+					<?php if ( get_field( 'contact_book_online' ) ) : ?>
+						<div class="contact-book-online-title">
+							<?php get_template_part( 'images/check' );
+							the_field( 'contact_book_online' ); ?>
+							</div>
+					<?php endif; ?>
+				</div><!-- end contact-book-online -->
 
-				if ( get_field( 'contact_faq' ) ) :
-					get_template_part( 'images/faq' );
-					the_field( 'contact_faq' );
-				endif;
+				<div class="contact-faq">
+					<?php if ( get_field( 'contact_faq' ) ) :
+						get_template_part( 'images/faq' );
+						the_field( 'contact_faq' );
+					endif; ?>
+				</div> <!--end contact-faq -->
 
-			endif; ?>
+			<?php endif; ?>
 
 		</div><!-- end contact-info-section-one -->
 
