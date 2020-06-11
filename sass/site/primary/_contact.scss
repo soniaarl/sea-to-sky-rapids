@@ -30,17 +30,47 @@
 	text-transform: uppercase;
 }
 
-.contact-title a {
+.site-main.contact .contact-title, .site-main.contact .contact-title a {
 	color: $dark_blue;
 	text-decoration: none;
 	font-weight: 700;
 	font-family: $heading_font;
 	letter-spacing: 4px;
-	font-size: 1.6em;
+	font-size: 25px;
 }
 
-.contact-book-online-title svg path {
+.site-main.contact h2 {
+	color: $dark_blue;
+}
+
+.site-main.contact svg path {
     fill: $dark_blue;
+}
+
+.office-location {
+	color: $dark_blue;
+}
+
+input::placeholder, textarea::placeholder {
+	font-family: $body_font;
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+	background-color: $dark_blue;
+	color: white;
+	font-family: $heading_font;
+	border: none;
+	width: 150px;
+	padding-top: 15px;
+	font-size: 18px;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field {
+	padding-bottom: 0;
+}
+
+div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form textarea {
+	border-radius: 0;
 }
 
 @media (min-width: 500px) {
