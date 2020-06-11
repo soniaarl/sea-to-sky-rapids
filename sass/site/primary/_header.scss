@@ -1,5 +1,19 @@
 .site-header {
-	background-color: $dark_blue;
-	color: #fff;
-	
+	background-color: rgba(0, 48, 63, 0.3);
+	color: #fff;	
 }
+
+.inner-width {
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    
+}
+
+.menu-toggle {
+    color: white;
+    background: transparent;
+    border: none;
+   
+}
+
