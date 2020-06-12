@@ -55,7 +55,27 @@ get_header(); ?>
 
 		</div><!-- end contact-info-section-one -->
 
-		<?php the_content(); ?>
+		<div class="office-address">
+			<?php 
+				$location = get_field('map');
+				if( $location ) {
+					// Loop over segments and construct HTML.
+					$address = '';
+					foreach( array('street_number', 'street_name', 'city', 'state', 'post_code') as $i => $k ) {
+						if( isset( $location[ $k ] ) ) {
+							$address .= sprintf( '<span class="segment-%s">%s</span> ', $k, $location[ $k ] );
+						}
+					}
+					// Trim trailing comma.
+					$address = trim( $address, ', ' ); 
+					// Display HTML. ?>
+					<h2 class="office-location">Office Location / Tour Meeting Point</h2>
+					<p class="company-title">Sea to Sky Rapids</p>
+					<p class="address"><?php echo $address ?></p>
+				<?php } ?>
+		</div><!-- end office-address --></div>
+
+			<?php the_content(); ?>
 
 		<div class="contact-info-section-two">
 
