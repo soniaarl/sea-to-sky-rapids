@@ -35,10 +35,10 @@ get_header(); ?>
  				if( get_sub_field('question') && get_sub_field('answer') ) :
 					echo "<button class='accordion'>";
 						the_sub_field('question');
-					echo "</button>";
-					echo "<p>";
+					echo "</button>";					
+					echo "<p class = 'panel'>";
 						the_sub_field('answer');
-					echo "</p>";
+					echo "</p>";					
 				endif;	  
 			endwhile;
 		endif;

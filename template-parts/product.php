@@ -63,52 +63,53 @@ if(function_exists('get_field')):
                 <?php endif; ?> <!-- End trip_highlights -->
 
             <!-- What's Included Group Field -->
-            <?php if( have_rows('whats_included') ): ?>
-                <h2>What's Included</h2>
-                <?php while( have_rows('whats_included') ): the_row(); 
+            <section class="whats-included">
+                <?php if( have_rows('whats_included') ): ?>
+                    <h2>What's Included</h2>
+                    <?php while( have_rows('whats_included') ): the_row(); 
 
-                // Get sub field values.
-                $included_summary = get_sub_field('included_summary');?>
-                
-                <p><?php echo $included_summary?></p>
-
-                    <!-- Included Gear -->
-                    <?php if( have_rows('included_gear') ): ?>
-                        <section class="gear">
-                            <p>Gear</p>
-                            <ul class="gear-items">
-                            <?php while( have_rows('included_gear') ): the_row(); 
-                            
-                            $gear = get_sub_field('gear');?>
-            
-                            <li><?php echo $gear?></li>
-                        
-                            <?php endwhile; ?>
-                            </ul>
-                        </section>
-                    <?php endif; ?> <!-- End Included Gear -->
+                    // Get sub field values.
+                    $included_summary = get_sub_field('included_summary');?>
                     
-                    <!-- Included Lunch -->
-                        <?php if( have_rows('included_lunch') ): ?>
-                        <section class="lunch">
-                            <p>Lunch</p>
-                            <ul class="lunch-items">
-                            <?php while( have_rows('included_lunch') ): the_row(); 
-                            
-                            $lunch = get_sub_field('lunch_item');?>
-            
-                            <li><?php echo $lunch?></li>
-                        
-                            <?php endwhile; ?>
-                            </ul>
-                        </section>
-                    <?php endif; ?> <!-- End Included Lunch -->
+                    <p><?php echo $included_summary?></p>
+
+                        <!-- Included Gear -->
+                        <?php if( have_rows('included_gear') ): ?>
+                            <section class="gear">
+                                <p>Gear</p>
+                                <ul class="gear-items">
+                                <?php while( have_rows('included_gear') ): the_row(); 
+                                
+                                $gear = get_sub_field('gear');?>
                 
-                <?php endwhile; ?>
-            <?php endif; ?> <!-- End What's Included -->
-            
+                                <li><?php echo $gear?></li>
+                            
+                                <?php endwhile; ?>
+                                </ul>
+                            </section>
+                        <?php endif; ?> <!-- End Included Gear -->
+                        
+                        <!-- Included Lunch -->
+                            <?php if( have_rows('included_lunch') ): ?>
+                            <section class="lunch">
+                                <p>Lunch</p>
+                                <ul class="lunch-items">
+                                <?php while( have_rows('included_lunch') ): the_row(); 
+                                
+                                $lunch = get_sub_field('lunch_item');?>
+                
+                                <li><?php echo $lunch?></li>
+                            
+                                <?php endwhile; ?>
+                                </ul>
+                            </section>
+                        <?php endif; ?> <!-- End Included Lunch -->
+                    
+                    <?php endwhile; ?>
+                <?php endif; ?> 
+            </section><!-- End What's Included -->
         <?php endwhile; ?>
-    <?php endif; // End product_descriptipn
+    <?php endif; // End product_description
 
     get_template_part( 'template-parts/testimonials', 'none' ); ?>
 

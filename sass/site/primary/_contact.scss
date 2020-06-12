@@ -1,60 +1,216 @@
 // Contact page styles
 
 .acf-map {
-    width: 100%;
+	width: 120%;
     height: 400px;
     border: #ccc solid 1px;
-	margin: 20px 0;
+	margin: 20px 0 40px -10%;
 	display: block;
 }
 
 .contact-banner {
 	position: relative;
 	top: 0; 
-    left: 0;
+	left: 0;
+	width: 150%;
+	margin-left: -25%;
+	background-color: $dark_blue;
+}
+
+.contact-banner img {
+	opacity: 0.75;
+	display: block;
 }
 
 .page-header h1.page-title {
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
-	font-size: 3em;
+	font-size: 2em;
+	margin: 0;
 }
 
 .company-title {
 	text-transform: uppercase;
+	margin-top: 5px;
+	margin-bottom: 2px;
 }
 
-.contact-title a {
+.contact-book-online {
+	margin-top: 40px;
+}
+
+.contact-faq {
+	margin-top: 40px;
+}
+
+.address {
+	margin-top: 2px;
+	margin-bottom: 0;
+}
+
+.contact-email-title, .contact-phone-title, .contact-social {
+	margin-top: 40px;
+}
+
+.contact-social svg {
+	margin-right: 5px;
+}
+
+.site-main.contact h2 {
+	margin-bottom: 0;
+}
+
+.site-main.contact h2 a {
 	color: $dark_blue;
 	text-decoration: none;
 	font-weight: 700;
 	font-family: $heading_font;
 	letter-spacing: 4px;
-	font-size: 1.6em;
+	font-size: 25px;
 }
 
-.contact-book-online-title svg {
-    color: $dark_blue;
+.site-main.contact h2 {
+	color: $dark_blue;
+}
+
+.site-main.contact svg path {
+    fill: $dark_blue;
+}
+
+.contact-info-section-one p, .contact-info-section-two p {
+	margin-top: 5px;
+}
+
+.site-main.contact .entry-content {
+	margin-top: 30px;
+}
+
+.office-address {
+	margin-top: 40px;
+}
+
+.office-location {
+	color: $dark_blue;
+	margin-top: 0;
+	max-width: 250px;
+}
+
+.segment-street_name::after, .segment-state::after {
+	content:"\a";
+    white-space: pre;
+}
+
+.segment-city::after {
+	content: ',';
+}
+
+input::placeholder, textarea::placeholder {
+	font-family: $body_font;
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+	background-color: $dark_blue;
+	color: white;
+	font-family: $heading_font;
+	border: none;
+	width: 150px;
+	padding-top: 15px;
+	font-size: 18px;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field {
+	padding-bottom: 0;
+}
+
+div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form textarea {
+	border-radius: 0;
+}
+
+.contact-titles {
+	display: flex;
+}
+
+.contact-titles h2 {
+	margin-top: 0;
+	margin-left: 10px;
+}
+
+div.wpforms-field-row.wpforms-field-medium {
+	overflow-x: hidden;
+}
+
+.contact-email-title p a, .contact-phone-title p a {
+	text-decoration: none;
+	color: #404040;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-one-half {
+	margin-left: 10px;
+}
+
+@media (min-width: 400px) {
+
+	div.wpforms-container-full .wpforms-form .wpforms-one-half {
+		width: 48.5%;
+	}
 }
 
 @media (min-width: 500px) {
 
-	.contact-info-section-one {
-		display: flex;
-		justify-content: center;
-		margin-right: 20px;
-		margin-left: 20px;
+	.contact-book-online, .contact-faq, .office-address, .contact-email-title, .contact-phone-title, .contact-social {
+		margin-top: 30px;
 	}
 
-	.contact-book-online, .contact-faq {
-		width: 40%;
+	.contact-info-section-one, .contact-info-section-two {
+		display: flex;
+		justify-content: center;
+	}
+
+	.contact-book-online, .contact-faq, .contact-email, .contact-phone {
+		width: 50%;
 	}
 	
 	.contact-book-online {
-		margin-right: 30px;
+		margin-right: 40px;
+	}
+
+}
+
+@media (min-width: 550px) {
+
+	div.wpforms-container-full .wpforms-form .wpforms-one-half {
+		width: 49%;
+	}
+}
+
+@media (min-width: 600px) {
+
+	.office-location {
+		max-width: 100%;
+	}
+
+	div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 750px) {
+
+	.acf-map {
+		width: 100%;
+		margin-left: 0;
+	}
+
+}
+
+@media (min-width: 800px) {
+
+	.site-main.contact {
+		max-width: 800px;
+		margin: 0 auto;
 	}
 
 }

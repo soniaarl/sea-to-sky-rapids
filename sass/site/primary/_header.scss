@@ -1,5 +1,41 @@
 .site-header {
-	background-color: $dark_blue;
-	color: #fff;
-	
+    background-color: rgba(0, 48, 63, 0.3);
+    color: #fff;	
 }
+
+.site-title {
+    text-transform: uppercase;
+}
+
+.inner-width {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-toggle {
+    color: white;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.main-navigation {
+    max-width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9998;
+    background-color: $dark_blue;
+}
+
+.main-navigation.toggled {
+    max-width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    display: block;
+}
+
