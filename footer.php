@@ -27,9 +27,21 @@
 					<p>Connect with us</p>
 					<?php if ( is_page() ) : ?>
 						<nav id="social-navigation" class="social-navigation"></nav>
-						<?php wp_nav_menu(array('theme_location' => 'social'));	?>
-						<?php echo the_field('contact_phone', 39); 
-						echo the_field('contact_email', 39);
+						<?php wp_nav_menu(array('theme_location' => 'social'));	
+						if(function_exists( 'get_field') ) :
+							if ( get_field( 'contact_phone_title' ) ) : ?>
+								<p><?php the_field( 'contact_phone_title' ); ?></p>
+							<?php endif; ?>
+							<?php if ( get_field ( 'contact_phone_text') ) : ?>
+								<p><a href="tel:<?php the_field('contact_phone_text')?>"><?php the_field( 'contact_phone_text' ); ?></a></p>
+							<?php endif; 
+							if ( get_field( 'contact_email_title' ) ) : ?>
+								<p><?php the_field( 'contact_email_title' ); ?></p>
+							<?php endif; ?>
+						<?php if ( get_field ( 'contact_email_text') ) : ?>
+							<p><a href="mailto:<?php the_field('contact_email_text')?>"><?php the_field( 'contact_email_text' ); ?></a></p>
+						<?php endif; 
+						endif;
 					endif; ?>
 				</div><!-- end footer-contact -->
 			</nav>

@@ -15,6 +15,12 @@
 	left: 0;
 	width: 150%;
 	margin-left: -25%;
+	background-color: $dark_blue;
+}
+
+.contact-banner img {
+	opacity: 0.75;
+	display: block;
 }
 
 .page-header h1.page-title {
@@ -71,6 +77,15 @@ div.wpforms-container-full .wpforms-form .wpforms-field {
 
 div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form textarea {
 	border-radius: 0;
+}
+
+.contact-titles {
+	display: flex;
+}
+
+.contact-titles h2 {
+	margin-top: 0;
+	margin-left: 10px;
 }
 
 @media (min-width: 500px) {
