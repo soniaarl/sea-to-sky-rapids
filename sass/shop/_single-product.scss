@@ -98,14 +98,14 @@
 		}
 		h2 {
 			font-size: 25px;
-			color: black;
+			color: $dark_blue;
 			max-width: 800px;
 			margin: auto;
 			margin-bottom: 10px;
 			margin-top: 20px;
 			
 		}
-		p {
+		.whats-included p {
 			max-width: 800px;
 			margin-right: auto;
 			margin-left: auto;
@@ -213,9 +213,6 @@
 		margin-bottom: 0;
 	}
 
-	.wc-bookings-date-picker .ui-datepicker td.bookable a {
-		background-color: $darkblue;
-	}
 
 	// Book Now Button
 	.wc-bookings-booking-form-button {
