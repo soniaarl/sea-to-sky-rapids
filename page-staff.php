@@ -35,19 +35,21 @@ get_header();
             $staff_query = new WP_Query( $args );
             if ( $staff_query->have_posts() ): ?>
             	<h2>Meet The Team</h2>
-                <div class="staff-card">
+                <div>
                     <?php while ( $staff_query->have_posts() ):
                         $staff_query->the_post() ?>
                         <?php the_post_thumbnail('large'); ?>
                         <?php if (function_exists('the_field')) : ?>
-                            <h3 class="staff-name"><?php the_title() ?> </h3>
-                            <p class="staff-position"><?php the_field('position'); ?> </p>
-                            <p class="field-label">Employee Since</p>
-                            <p class="staff-employee"><?php the_field('employee_since'); ?> </p>
-                            <p class="field-label">Hometown</p>
-                            <p class="staff-hometown"><?php the_field('home_town'); ?> </p>
-                            <p class="field-label">About</p>
-                            <p class="staff-bio"><?php the_field('bio'); ?> </p>
+                            <div class="staff-card">
+                                <h3 class="staff-name"><?php the_title() ?> </h3>
+                                <p class="staff-position"><?php the_field('position'); ?> </p>
+                                <p class="field-label">Employee Since</p>
+                                <p class="staff-employee"><?php the_field('employee_since'); ?> </p>
+                                <p class="field-label">Hometown</p>
+                                <p class="staff-hometown"><?php the_field('home_town'); ?> </p>
+                                <p class="field-label">About</p>
+                                <p class="staff-bio"><?php the_field('bio'); ?> </p>
+                            </div>
                         <?php endif; ?>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
