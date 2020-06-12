@@ -1,0 +1,115 @@
+.home-intro-text{
+    text-align: center;
+    margin: 0 15px;
+}
+
+.tours-preview{
+    margin: 0 15px;
+    p{
+        color: black;
+        line-height: 1;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+.tour-details-button p{
+    color: white;
+}
+
+.single-tour-preview{
+
+background-color: $color__background-pre;
+
+}
+
+.single-tour-preview{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+// .z-single-tour-img{
+//     // background-color: $yellow;
+//     border-bottom: 2px solid $yellow;
+// }
+
+.z-single-tour-img img{
+    border-bottom: 2px solid $yellow;
+}
+.z-sigle-tour-title{
+    position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+.tours-overlay{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    z-index: 20000;
+}
+.single-tour-detailed-info{
+    padding-left: 10%;
+}
+.tour-more-info-button p {
+    color: white;
+    text-align: center;
+    background-color: $dark_blue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // font-weight: bolder;
+    font-family: $heading_font;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+@media(min-width:600px){
+
+    .home-intro-text{
+        margin: 0 6%;
+    }
+
+
+    .tours-preview{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    .single-tour-preview{
+        width: 44%;
+    }
+
+    .single-tour-preview{
+
+        margin-bottom: 40px;
+    }
+
+}
+
+@media(min-width:1000px){
+    
+
+    .tours-preview{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: 5%;
+    }
+
+
+    .single-tour-preview{
+        width: 22%;
+    }
+
+    .single-tour-preview{
+
+        margin-bottom: 40px;
+    }
+
+}
+// adding this for test the github

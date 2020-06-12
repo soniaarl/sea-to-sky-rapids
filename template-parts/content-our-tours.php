@@ -12,16 +12,19 @@
 			
 			<article class="single-tour-preview"><a href="<?php echo get_permalink() ?>">
 			
-				<?php the_post_thumbnail('full'); ?>
-			
-				<h2><?php the_title(); ?></h2>
-		
+				<div class="z-single-tour-img">
+					<?php the_post_thumbnail('full'); ?>
+				</div>
+				<div class="tours-overlay"></div>
+				<h2 class='z-sigle-tour-title'><?php the_title(); ?></h2>
+	
 				<?php // support for ACF
 				if ( function_exists( 'get_field' ) ) :
 					if ( have_rows('product_summary') ):
 						while ( have_rows('product_summary') ) : the_row();
 							if(get_sub_field('duration') ) : ?>
 								
+								<div class="single-tour-detailed-info">
 								<div class='tour-preview-element sts-tour-duration'>
 									<p><b>Duration: </b><?php the_sub_field( 'duration' ); ?>h</p>
 								</div><!-- end of sts-tour-duration -->
@@ -57,7 +60,8 @@
 								<div class='tour-preview-element sts-tour-price'>
 									<p><b>Price: </b>$<?php the_sub_field( 'price' ); ?></p>
 								</div><!-- // end of sts-tour-price -->
-
+								</div> 
+								<!-- end of single-tour-datailed-info -->
 							<?php endif; // end of price if
 
 						endwhile;

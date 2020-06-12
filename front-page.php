@@ -30,9 +30,11 @@ get_header(); ?>
 				<p class="book-now-button">Book Now</p>
 			</a>
 	</div><!-- end home-banner-->
-
-			<?php 
-			the_content();
+			<div class="home-intro-text">
+			<?php  the_content(); ?>
+			</div>
+			<!-- end of home-intro-text -->
+			<?php
 			get_template_part ( 'template-parts/content-our-tours' );
 			get_template_part( 'template-parts/testimonials' ); 
 			
