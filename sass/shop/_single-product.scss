@@ -1,5 +1,4 @@
 .single-product {
-
 	div.product {
 		position: relative;
 
@@ -121,7 +120,7 @@
 	// Product Summary
 	.product-summary {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		ul {
 		list-style: none;
 		margin: 0;
@@ -132,7 +131,7 @@
 		}
 	}
 
-	@media (min-width: 750px){
+	@media (min-width: 500px){
 		.product-summary {
 			width: 100%;
 			justify-content: center;
@@ -169,10 +168,10 @@
 		max-width: 800px;
 		margin: auto;
 		box-shadow: 1px 1px 3px #a5a5a5;
-		transition: 0.8s ease;
+		transition: 0.4s ease;
 		}
 		a:hover{
-			box-shadow: 1px 1px 1px #dbdbdb;
+			background-color: lighten($yellow, 10%);
 		}
 	}
 
@@ -185,6 +184,7 @@
 		}
 	}
 
+	// Itinerary
 	.morning-trip, .afternoon-trip {
 		ul {
 			list-style: none;
@@ -199,6 +199,12 @@
 		.vertical-line:last-child {
 			display: none;
 		}
+	}
+
+	@media (min-width: 997px) {
+		.itinerary h2 {
+			padding-top: 30px;
+		} 
 	}
 
 	// Calendar/Cart Styles
@@ -299,10 +305,10 @@
 		margin-left: auto;
 		cursor: pointer;
 		box-shadow: 1px 1px 3px #a5a5a5;
-		transition: 0.8s ease;
+		transition: 0.4s ease;
 	}
 	.wc-bookings-booking-form-button:hover {
-		box-shadow: 1px 1px 1px #dbdbdb;
+		background-color: lighten($yellow, 10%);
 	}
 
 	// FAQ Button
@@ -320,10 +326,10 @@
 			max-width: 800px;
 			margin: auto;
 			box-shadow: 1px 1px 3px #a5a5a5;
-			transition: 0.8s ease;
+			transition: 0.4s ease;
 		}
 		a:hover{
-			box-shadow: 1px 1px 1px #dbdbdb;
+			background-color: lighten($light_blue, 5%);
 		}
 	}
 

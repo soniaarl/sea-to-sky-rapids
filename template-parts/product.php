@@ -115,10 +115,9 @@ if(function_exists('get_field')):
 
 
     <!-- Itinerary -->
-    <h2>Itinerary</h2>
-
     <?php if( have_rows('product_itinerary') ): ?>
         <section class="itinerary">
+        <h2>Itinerary</h2>
         <?php while( have_rows('product_itinerary') ): the_row(); ?>
 
         <!-- Morning Trip -->

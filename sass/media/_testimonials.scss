@@ -5,6 +5,7 @@
     img {
         filter: brightness(50%);
         width: 99vw;
+        margin-top: 30px;
         @media (min-width: 997px){
         height: 500px;
         object-fit: cover;
