@@ -17,9 +17,9 @@ add_action( 'init', 'remove_items_init' );
 
 // Open banner
 function open_banner_container(){?>
-	<div class="banner-container"><?php
+	<div class="banner single-tour"><?php
 }
-add_action('woocommerce_before_single_product_summary', 'open_banner_container');
+add_action('woocommerce_before_single_product_summary', 'open_banner_container', 4);
 
 function add_title_back(){
 // Move title into a div for the banner
@@ -31,11 +31,9 @@ add_action( 'init', 'add_title_back' );
 function close_banner_container(){
 	// Banner Image
 		if( get_field('banner_image') ): ?>
-			<div class="image-overlay">
 				<img src="<?php the_field('banner_image'); ?>" alt="People river rafting" />
-			</div>
 		<?php endif; ?>
-	</div> <!-- end banner container --> <?php
+	</div> <!-- end single-tour banner container --> <?php
 }
 add_action('woocommerce_before_single_product_summary', 'close_banner_container');
 
@@ -46,7 +44,9 @@ add_action('add_meta_boxes', 'remove_short_description', 999);
 
 // Add content to single product page
 function add_content_to_single_product() {
-	get_template_part( 'template-parts/product', 'none' );
+	get_template_part( 'template-parts/product' );
+	// Add title above calendar cart ?>
+	<h2 class="book-trip">Book your trip</h2> <?php
 }
 add_action ('woocommerce_single_product_summary', 'add_content_to_single_product', 8);
 

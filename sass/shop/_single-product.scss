@@ -168,6 +168,11 @@
 		width: 100%;
 		max-width: 800px;
 		margin: auto;
+		box-shadow: 1px 1px 3px #a5a5a5;
+		transition: 0.8s ease;
+		}
+		a:hover{
+			box-shadow: 1px 1px 1px #dbdbdb;
 		}
 	}
 
@@ -197,14 +202,18 @@
 	}
 
 	// Calendar/Cart Styles
+	h2.book-trip {
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+
 	.cart {
 		max-width: 800px;
 		margin: auto;
 	}
 
 	.wc-bookings-booking-form {
-		padding: 5px;
-		margin-top: 30px;
+		padding: 0;
 		fieldset {
 			padding: 0;
 		}
@@ -213,6 +222,69 @@
 		margin-bottom: 0;
 	}
 
+		// Persons input
+		.wc-bookings-booking-form .form-field input[type=number] {
+			width: 100%;
+		}
+
+		// Timezones block
+		.wc-bookings-date-picker-timezone-block {
+			display: none;
+		}
+
+		// Calender month picker
+		.wc-bookings-date-picker .ui-datepicker .ui-datepicker-title {
+			background-color: $dark_blue;
+		}
+
+		#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker .ui-datepicker-next, 
+		#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev {
+		background-color: $dark_blue;
+		}
+		
+		.ui-widget-header {
+			background: $dark_blue;
+		}
+
+		.wc-bookings-booking-form {
+			padding: 10px;
+			border: none;
+			box-shadow: 1px 1px 1px 1px rgb(228, 228, 228);
+			fieldset {
+				border: none;
+			}
+		
+		}
+
+		// Calendar container
+		.wc-bookings-booking-form fieldset .picker.hasDatepicker {
+			margin: 0;
+		}
+
+		// Calendar date blocks
+		.wc-bookings-date-picker .ui-datepicker td.bookable a:hover {
+			background-color: lighten($light_blue, 5%) !important;
+		}
+
+		.wc-bookings-date-picker .ui-datepicker td.bookable a { //inactive/unclicked state
+			background-color: $light_blue !important;
+			color: $dark_blue !important;
+		}
+
+		.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default { //selected block
+			background: $yellow !important;
+			color: $dark_blue !important;
+		}
+
+		// Booking time
+		.wc-bookings-booking-form .block-picker li a.selected, .wc-bookings-booking-form .block-picker li a:hover  {
+			background: $yellow !important;
+			color: black !important;
+		}
+		.wc-bookings-booking-form .block-picker {
+			padding: 0;
+			margin-bottom: 20px;
+		}
 
 	// Book Now Button
 	.wc-bookings-booking-form-button {
@@ -225,6 +297,12 @@
 		max-width: 800px;
 		justify-self: center;
 		margin-left: auto;
+		cursor: pointer;
+		box-shadow: 1px 1px 3px #a5a5a5;
+		transition: 0.8s ease;
+	}
+	.wc-bookings-booking-form-button:hover {
+		box-shadow: 1px 1px 1px #dbdbdb;
 	}
 
 	// FAQ Button
@@ -241,6 +319,11 @@
 			text-align: center;
 			max-width: 800px;
 			margin: auto;
+			box-shadow: 1px 1px 3px #a5a5a5;
+			transition: 0.8s ease;
+		}
+		a:hover{
+			box-shadow: 1px 1px 1px #dbdbdb;
 		}
 	}
 

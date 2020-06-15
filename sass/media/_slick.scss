@@ -3,10 +3,13 @@
 {
     position: relative;
     margin: 30px 0;
-    max-width: 800px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 -30px;
     display: block;
     box-sizing: border-box;
+    @media (min-width: 1200px){
+        margin: auto;
+    }
 
     -webkit-user-select: none;
        -moz-user-select: none;
