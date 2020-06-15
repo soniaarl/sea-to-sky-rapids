@@ -15,7 +15,7 @@ get_header(); ?>
 
 <main id="primary" class="site-main">
 
-	<div class="home-banner">
+	<div class="banner home">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if ( function_exists ( 'get_field' ) ) :
 				the_post_thumbnail('full');

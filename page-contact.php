@@ -15,7 +15,7 @@ get_header(); ?>
 
 <main id="primary" class="site-main contact">
 
-	<div class="contact-banner">
+	<div class="banner contact">
 		<?php while ( have_posts() ) : the_post(); 
 		the_post_thumbnail( 'full' ); ?>
 		<header class="page-header">

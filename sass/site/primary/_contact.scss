@@ -1,35 +1,11 @@
 // Contact page styles
 
 .acf-map {
-	width: 120%;
+	width: 100vw;
     height: 400px;
     border: #ccc solid 1px;
-	margin: 20px 0 40px -10%;
+	margin: 20px 0 40px -30px;
 	display: block;
-}
-
-.contact-banner {
-	position: relative;
-	top: 0; 
-	left: 0;
-	width: 150%;
-	margin-left: -25%;
-	background-color: $dark_blue;
-}
-
-.contact-banner img {
-	opacity: 0.75;
-	display: block;
-}
-
-.page-header h1.page-title {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-	font-size: 2em;
-	margin: 0;
 }
 
 .company-title {

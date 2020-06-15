@@ -16,11 +16,11 @@ get_header();
 <?php while ( have_posts() ) : the_post(); ?>
 <main id="primary" class="site-main">
 
-    <div class="who-we-are-banner">
+    <div class="banner who-we-are">
     
         <?php the_post_thumbnail( 'full' ); ?>
         <header class="page-header">
-            <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+            <?php the_title( '<h1 class="contact-h1">', '</h1>' ); ?>
         </header>
     </div><!-- end who-we-are-banner -->
 
