@@ -37,7 +37,7 @@ h1, h2, h3, h4{
 
 $body_font: 'FuturaPT';
 
-p {
+p, td, dt {
     font-family: $body_font;
 }
 

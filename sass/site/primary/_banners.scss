@@ -28,14 +28,26 @@
     margin-left: 0;
 }
 
+.banner.home h1 {
+    max-width: 240px;
+}
+
 @media (min-width: 400px) {
     .banner h1 {
         font-size: 3rem;
+    }
+
+    .banner.home h1 {
+        max-width: 300px;
     }
 }
 
 @media (min-width: 800px) {
     .banner h1 {
         font-size: 70px;
+    }
+
+    .banner.home h1 {
+        max-width: 500px;
     }
 }
