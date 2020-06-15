@@ -1,0 +1,30 @@
+/* Login page styles */
+body {
+    padding: 10px;
+}
+
+.login-title {
+    color: #00303f;
+    font-size: 22px;
+    margin: 45px 0 0 0;
+}
+
+.login form {
+    background-color: #00303f;
+}
+
+.login h1 a {
+    margin: 0;
+}
+
+.login form label {
+    color: white;
+}
+
+#login {
+    padding: 40px 0 0;
+}
+
+#nav, #backtoblog {
+    color: black;
+}

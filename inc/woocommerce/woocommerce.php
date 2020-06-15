@@ -237,3 +237,31 @@ function remove_result_count_init(){
 	remove_action('woocommerce_before_shop_loop' , 'woocommerce_result_count' , 20);
 }
 add_action('init' , 'remove_result_count_init');
+
+// Login page styles
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/smiley.png);
+		height: 171.4px;
+		width: 320px;
+		background-size: 320px 171.4px;
+		background-repeat: no-repeat;
+        padding-bottom: 30px;
+        }
+	</style>
+	<h1 class="login-title">Welcome to Sea to Sky Rapids</h1>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+// Change link on login page
+function my_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' ); 
+
+// Styling the login page
+function my_custom_login_stylesheet() {
+	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/css/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_custom_login_stylesheet' );
