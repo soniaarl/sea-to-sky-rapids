@@ -49,8 +49,14 @@ button.accordion {
   margin-bottom: 0;
 }
 
-h3 {
+.faq-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-page h3 {
   color: $dark_blue;
+  font-size: 1.2em;
 }
 
 .panel {
@@ -59,4 +65,26 @@ h3 {
   border-left: 1px solid;
   border-top: 2px $yellow solid;
   margin-top: 0;
+}
+
+.site .banner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 720px){
+
+.faq-page h3 {
+  font-size: 1.5em;
+}
+
+.faq-page .accordion {
+  font-size: 1.1em;
+}
+
+.site .faq-page {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
 }

@@ -56,14 +56,16 @@ background-color: $color__background-pre;
     margin-bottom: 20px;
 }
 
-// .z-single-tour-img{
-//     // background-color: $yellow;
-//     border-bottom: 2px solid $yellow;
-// }
-
-.z-single-tour-img img{
+.z-single-tour-img{
+    background-color: $dark_blue;
     border-bottom: 2px solid $yellow;
 }
+
+.z-single-tour-img img{
+    opacity: 0.75;
+    display: block;
+}
+
 .z-sigle-tour-title{
     position: absolute;
   top: 15%;

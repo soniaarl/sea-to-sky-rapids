@@ -23,7 +23,7 @@ get_header(); ?>
 	</div><!-- end faq-banner -->
 
 	<?php the_content(); ?>
-	<div id="faq">
+	<div id="faq" class="faq-page">
 		<?php // check if the repeater field has rows of data
 		if( have_rows('faqs') ) :
 			while( have_rows('faqs') ): the_row();

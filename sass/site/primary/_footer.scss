@@ -1,0 +1,47 @@
+.site-footer {
+	background-color: $dark_blue;
+	color: #fff;
+	padding: 1.25rem;
+}
+
+.footer-menus {
+	display: flex;
+    
+    justify-content: space-between;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.trip-info {
+    display: inline-block;
+}
+
+.trip-info ul {
+    list-style: none;
+}
+
+.trip-after a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-footer-menu-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-social-menu-container ul {
+    list-style: none;
+
+}
+
+menu {
+    margin: 0;
+}
