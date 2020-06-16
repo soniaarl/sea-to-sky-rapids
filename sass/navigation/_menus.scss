@@ -41,20 +41,22 @@
 	.menu-toggle {
 		cursor: pointer;
 		border: none;
-		background-color: #00303fb7;
+		background-color: transparent;
 		padding: 0;
 		margin-right: 20px;
 	}
 
 	button.menu-toggle:focus {
-		background-color: #00303fb7;
-		// background: $dark_blue;
+		background-color: transparent;
 		outline: none;
 	}
 
 	// Toggled menu
 	.main-navigation.toggled {
 		position: relative;
+		a {
+			height: 100%;
+		}
 		.nav-menu {
 			height: 160px;
 			width: 100%; 
@@ -67,6 +69,25 @@
 			transition: 0.5s; 
 			z-index: 100;
 			padding-right: 20px;
+		}
+	}
+
+	// Add slide transition when hamburger menu is opened
+	@media (max-width: 700px) {
+		.nav-menu {
+			display: block;
+			height: 0;
+			width: 100%; 
+			position: fixed;
+			margin-top: 64px;
+			z-index: 101; 
+			top: 0; 
+			left: 0;
+			background-color: #00303fb7;
+			transition: 0.5s; 
+			z-index: 100;
+			padding-right: 20px;
+			overflow: hidden;
 		}
 	}
 	
@@ -84,7 +105,6 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
 			top: 100%;
 			left: -999em;
@@ -156,7 +176,9 @@
 		.menu-toggle {
 			display: none;
 		}
-	
+		.nav-menu {
+			position: static;
+		}
 		.main-navigation ul {
 			display: flex;
 			padding: 0 25px;
