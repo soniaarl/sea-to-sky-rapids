@@ -2,3 +2,40 @@ div .staff-card{
 	background-color: $light_blue;
 	border: 2px solid $yellow;
 }
+
+div .staff-about {
+	max-width: 600px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.staff-about p {
+	margin: 50px 0 20px;
+	font-size: 16px;
+	padding: 0 18px;
+}
+
+@media only screen and (min-width: 650px) {
+.staff-about p {
+	font-size: 22px;
+	padding: 0 22px;
+	}
+}
+
+.staff-card p, h3, img{
+	text-align: center;
+	padding: 0 30px;
+}
+
+.staff-card {
+	margin: 30px 15px;
+}
+.field-label {
+	text-transform: uppercase;
+}
+
+.staff-name {
+	letter-spacing: 1px;
+	font-weight: 300;
+}
+
