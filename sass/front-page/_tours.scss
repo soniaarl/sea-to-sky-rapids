@@ -5,8 +5,8 @@
 	padding-bottom: 56.25%;
 	overflow: hidden;
 	max-width: 100%;
-	height: auto;
-	background-color: $dark_blue;
+	height: 400px;
+    background-color: $dark_blue;
 } 
 
 video { 
@@ -14,8 +14,14 @@ video {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	opacity: 0.90;
+    height: 100%;
+    opacity: 0.90;
+    height: 400px;
+    object-fit: cover;
+}
+
+.banner.home {
+    background-color: transparent;
 }
 
 
@@ -112,6 +118,21 @@ background-color: $color__background-pre;
 
 }
 
+@media (min-width: 720px) {
+
+    .video-container { 
+        padding-bottom: 0;
+        height: 500px;
+        margin: 0 auto;
+    } 
+    
+    video { 
+        height: 500px;
+        object-fit: cover;
+    }
+
+}
+
 @media(min-width:1000px){
     
 
@@ -134,3 +155,4 @@ background-color: $color__background-pre;
 
 }
 // adding this for test the github
+
