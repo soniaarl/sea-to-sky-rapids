@@ -111,20 +111,17 @@
 	}( container ) );
 }() );
 
+
+// Function to remove "toggled class" from mobile nav when in desktop mode
 function getScreenWidth () {
-		const mql = window.matchMedia('(min-width: 720px)');
-    
+		const mql = window.matchMedia('(min-width: 700px)');
+		const navbar = document.getElementById("site-navigation");
+		
         const screenTest = (e) => {
             if(e.matches){
-                console.log('Screen wider than 720px');
-                // Remove the show class from the nav
-                // by setting navOpen to false
-                setMenu(false);
-            }else{
-                // Not needed...but leaving it in so you 
-                // can see how it works...remove if you want...
-                console.log('Screen narrower than 720px');
-            } 
+                // Remove the toggled class from the nav
+                navbar.classList.remove("toggled");
+			}
         }
     
         mql.addListener(screenTest);
