@@ -110,3 +110,32 @@
 		}
 	}( container ) );
 }() );
+
+function getScreenWidth () {
+		const mql = window.matchMedia('(min-width: 720px)');
+    
+        const screenTest = (e) => {
+            if(e.matches){
+                console.log('Screen wider than 720px');
+                // Remove the show class from the nav
+                // by setting navOpen to false
+                setMenu(false);
+            }else{
+                // Not needed...but leaving it in so you 
+                // can see how it works...remove if you want...
+                console.log('Screen narrower than 720px');
+            } 
+        }
+    
+        mql.addListener(screenTest);
+    
+        // Clean up to prevent multiple listeners
+        // from being added to the component everytime
+        // the component re-renders...
+        // ...basically removes the listener
+        return _ => {
+            mql.removeListener(screenTest);
+		}
+}
+
+getScreenWidth();

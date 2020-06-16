@@ -1,39 +1,77 @@
-.inner-width {
-	background-color: $dark_blue;
-}
 
-.site-header .inner-width {
-	display: flex;
-}
-
-.inner-width {
-
-	justify-content: space-between;
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
-	align-items: center;
+	z-index: 101;
+
+	// Left side logo
+	.site-branding {
+		text-transform: uppercase;
+		margin-left: 20px;
+	}
+
+	.inner-width {
+		background-color: #00303fb7;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+	}
+
+	// Links
+	.site-branding a, .main-navigation a{
+		color: white;
+		display: block;
+		text-decoration: none;
+		text-align: right;
+	}
+
+	// Hamburger button
+	.button-line {
+		background-color: white;
+		height: 4px;
+		width: 35px;
+		margin: 5px 0;
+		border-radius: 3px;
+		display: block;
+	}
+
+	.menu-toggle {
+		cursor: pointer;
+		border: none;
+		background-color: #00303fb7;
+		padding: 0;
+		margin-right: 20px;
+	}
+
+	button.menu-toggle:focus {
+		background-color: #00303fb7;
+		// background: $dark_blue;
+		outline: none;
+	}
+
+	// Toggled menu
+	.main-navigation.toggled {
+		position: relative;
+		.nav-menu {
+			height: 160px;
+			width: 100%; 
+			position: fixed;
+			margin-top: 64px;
+			z-index: 101; 
+			top: 0; 
+			left: 0;
+			background-color: #00303fb7;
+			transition: 0.5s; 
+			z-index: 100;
+			padding-right: 20px;
+		}
+	}
 	
 }
 
-.site-branding {
-	text-transform: uppercase;
-	margin-left: 20px;
-}
-
-button.menu-toggle {
-	border: none;
-	background-color: $dark_blue;
-	padding: 0;
-	margin-right: 20px;
-}
-
-button.menu-toggle:focus {
-	background-color: $dark_blue;
-	background: $dark_blue;
-}
-
-.main-navigation.toggled {
-	display: block;
-}
 
 .main-navigation {
 	display: block;
@@ -113,14 +151,22 @@ button.menu-toggle:focus {
 	top: 0;
 }
 
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
+@media screen and (min-width: 700px) {
+	.site-header {
+		.menu-toggle {
+			display: none;
+		}
+	
+		.main-navigation ul {
+			display: flex;
+			padding: 0 25px;
+			li {
+				display: block;
+			}
+			li:not(:last-child){
+				margin-right: 25px;
+			}
+		}
 	}
 }
 
