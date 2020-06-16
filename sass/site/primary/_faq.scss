@@ -1,7 +1,6 @@
-
 .accordion {
     background-color: #eee;
-    color: #444;
+    color: $dark_blue;;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -10,33 +9,54 @@
     outline: none;
     transition: 0.4s;
     margin-bottom: 10px;
-    border: none;
+    border-radius: 0;
 }
 
 .active, .accordion:hover,
 button:focus {
   background-color: #ccc;
-  background: #ccc;
+  background: white;
   border: none;
 }
 
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
+  font-size: 15px;
+  color: $dark_blue;
   float: right;
   margin-left: 5px;
+  
 }
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
  }
 
-
- .panel {
+.panel {
     padding: 0 18px;
     background-color: white;
     display: none;
     overflow: hidden;
-  
+    padding: 10px;
   }
+
+button.accordion {
+  text-transform: uppercase;
+  font-family: "American-Captain";
+  font-size: 1em;
+  background-color: $light_blue;
+  color: $dark_blue;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: $dark_blue;
+}
+
+.panel {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-top: 2px $yellow solid;
+  margin-top: 0;
+}
