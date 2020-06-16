@@ -1,0 +1,67 @@
+abbr[title] {
+    text-decoration: none;
+}
+
+#post-122 h1.entry-title {
+    color: $dark_blue;
+}
+
+.woocommerce-billing-fields {
+
+    h3 {
+        font-size: 25px;
+        color: $dark_blue;
+    }
+
+    input {
+        border-radius: 0;
+        width: 100%;
+        margin-top: 5px;
+        padding: 7px;
+    }
+
+    input[type="text"] {
+        font-family: $body_font;
+    }
+
+    input:focus {
+        outline-color: $dark_blue;
+    }
+
+}
+
+.woocommerce-info {
+    font-family: $body_font;
+
+    a {
+        text-decoration: none;
+        font-weight: 700;
+        color: $dark_blue;
+    }
+}
+
+.select2-selection.select2-selection--single {
+    border-radius: 0;
+    border-color: #ccc;
+    height: 40px;
+
+    &:focus {
+        outline-color: $dark_blue;
+    }
+}
+
+#select2-billing_country-container {
+    padding: 7px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 7px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: $dark_blue;
+}
+
+.select2-container--default .select2-results__option[data-selected=true] {
+    outline-color: $dark_blue;
+}
