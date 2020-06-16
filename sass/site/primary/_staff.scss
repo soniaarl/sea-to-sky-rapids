@@ -1,37 +1,55 @@
-div .staff-card{
+.staff-about p {
+	font-size: 16px;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 700px;
+	padding: 20px 20px 10px;
+}
+
+.staff-card{
 	background-color: $light_blue;
 	border: 2px solid $yellow;
-}
-
-div .staff-about {
-	max-width: 600px;
-	margin: 0px auto;
+	margin: 25px auto;
 	text-align: center;
-}
-
-.staff-about p {
-	margin: 50px 0 20px;
-	font-size: 16px;
-	padding: 0 18px;
-}
-
-@media only screen and (min-width: 650px) {
-.staff-about p {
-	font-size: 22px;
-	padding: 0 22px;
-	}
+	max-width: 500px;
 }
 
 .staff-card p, h3, img{
 	text-align: center;
-	padding: 0 30px;
+	
 }
 
-.staff-card {
-	margin: 30px 15px;
+
+.staff-card img {
+	padding: 20px 30px 5px;
 }
-.field-label {
+
+
+
+
+@media only screen and (min-width: 650px) {
+.staff-about p {
+	font-size: 22px;
+	}
+}
+
+
+
+p.field-label {
 	text-transform: uppercase;
+
+}
+
+.field-label p {
+	margin: 0;
+}
+
+p.staff-position {
+	margin: 0 ;
+}
+
+h3.staff-name {
+	margin-bottom: 0;
 }
 
 .staff-name {
