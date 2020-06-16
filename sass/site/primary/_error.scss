@@ -1,0 +1,26 @@
+.error-404.not-found {
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.error-404.not-found p {
+    margin-bottom: 5px;
+}
+
+.error-404.not-found a {
+    text-decoration: none;
+    color: $dark_blue;
+    font-weight: 700;
+}
+
+@media (min-width: 450px) {
+    .error-404.not-found {
+        max-width: 430px;
+    }
+}
+
+@media (min-width: 800px) {
+    .error-404.not-found {
+        max-width: 720px;
+    }
+}
