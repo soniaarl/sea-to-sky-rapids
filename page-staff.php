@@ -23,8 +23,8 @@ get_header();
             <?php the_title( '<h1 class="contact-h1">', '</h1>' ); ?>
         </header>
     </div><!-- end who-we-are-banner -->
-
-        <?php the_content(); ?>
+        
+        <div class ="staff-about"><?php the_content(); ?></div>
         <?php get_template_part( 'template-parts/testimonials'); ?>
         
         <?php
@@ -38,9 +38,10 @@ get_header();
                 <div>
                     <?php while ( $staff_query->have_posts() ):
                         $staff_query->the_post() ?>
-                        <?php the_post_thumbnail('large'); ?>
+                        
                         <?php if (function_exists('the_field')) : ?>
                             <div class="staff-card">
+                                <?php the_post_thumbnail('large'); ?>
                                 <h3 class="staff-name"><?php the_title() ?> </h3>
                                 <p class="staff-position"><?php the_field('position'); ?> </p>
                                 <p class="field-label">Employee Since</p>

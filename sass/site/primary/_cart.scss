@@ -1,5 +1,5 @@
 .post-145 {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -122,4 +122,30 @@ a.button.wc-forward::after {
 
 .woocommerce-message {
     font-family: $body_font;
+}
+
+.actions input {
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+.actions button {
+    border-radius: 0;
+    background-color: $light_blue;
+    color: $dark_blue;
+    font-family: $body_font;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-weight: 700;
+}
+
+input[name="coupon_code"] {
+    font-family: $body_font;
+
+    &:active, &:focus {
+        outline-color: $dark_blue;
+    }
 }
