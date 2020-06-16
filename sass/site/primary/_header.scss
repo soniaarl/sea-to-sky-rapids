@@ -5,6 +5,16 @@
 
 .site-title {
     text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 10px;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;  
+        }
+        p {
+            margin: 0;
+        }
 }
 
 .inner-width {
@@ -14,13 +24,20 @@
 }
 
 .menu-toggle {
-    color: white;
     background: transparent;
     border: none;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 9999;     
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    background-color: rgba(0, 48, 63, 0.3);
 }
 
 .main-navigation {
@@ -30,12 +47,43 @@
     right: 0;
     z-index: 9998;
     background-color: $dark_blue;
+    text-decoration: none;
+    font-size: 1.3em;
+        a{
+            color: white;
+        }
 }
+
+.site-branding {
+    padding-left: 20px;
+}
+
+.main-navigation li{
+    padding: 7px;
+}
+
+.main-navigation li a:active,
+.main-navigation li a:focus,
+.main-navigation li a:hover {
+    letter-spacing: 2px;
+    transition: all 0.5s ease 0s;
+}
+
 
 .main-navigation.toggled {
     max-width: 100%;
     text-align: center;
     padding-top: 50px;
-    display: block;
+    display: inline-block;
+    text-decoration: none;
+        button {
+            background-color: $dark_blue;
+        }
 }
+
+.menu-toggle {
+    padding-right: 20px;
+    border: none;
+}
+
 
