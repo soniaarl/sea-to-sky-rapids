@@ -1,6 +1,43 @@
+header {
+	background-color: $dark_blue;
+}
+
+.site-header .inner-width {
+	display: flex;
+}
+
+.inner-width {
+
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	
+}
+
+.site-branding {
+	text-transform: uppercase;
+	margin-left: 20px;
+}
+
+button.menu-toggle {
+	border: none;
+	background-color: $dark_blue;
+	padding: 0;
+	margin-right: 20px;
+}
+
+button.menu-toggle:focus {
+	background-color: $dark_blue;
+	background: $dark_blue;
+}
+
+.main-navigation.toggled {
+	display: block;
+}
+
 .main-navigation {
 	display: block;
-	width: 100%;
+
 
 	ul {
 		display: none;
@@ -10,8 +47,7 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
+
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
@@ -73,6 +109,8 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	right: 0;
+	top: 0;
 }
 
 @media screen and (min-width: 37.5em) {
