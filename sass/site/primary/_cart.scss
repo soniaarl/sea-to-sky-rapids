@@ -149,3 +149,34 @@ input[name="coupon_code"] {
         outline-color: $dark_blue;
     }
 }
+
+.return-to-shop a {
+    text-decoration: none;
+    font-weight: 700;
+    color: $dark_blue;
+}
+
+.woocommerce-table.woocommerce-table--order-details.shop_table.order_details th {
+    text-align: left;
+    font-family: $body_font;
+}
+
+.wc-booking-summary li {
+    font-family: $body_font;
+}
+
+.woocommerce-order-details__title {
+    color: $dark_blue;
+}
+
+.woocommerce-table__product-name.product-name {
+    color: $dark_blue;
+}
+
+tfoot tr, tfoot th {
+    font-family: $body_font;
+}
+
+.wc-booking-summary-number {
+    font-family: $body_font;
+}

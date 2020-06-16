@@ -18,7 +18,15 @@ get_header(); ?>
 	<div class="banner home">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if ( function_exists ( 'get_field' ) ) :
-				the_post_thumbnail('full');
+				// the_post_thumbnail('full');
+
+				if ( get_field( 'banner_video' ) ) : ?>
+					<div class="video-container">
+						<?php $video_mp4 = get_field( 'banner_video' ); ?>
+						<video src="<?php echo $video_mp4['url']?>"autoplay muted loop></video>
+					</div>
+				<?php endif;
+
 				if ( get_field( 'banner_slogan' ) ) : ?>
 					<h1><?php the_field( 'banner_slogan' ); ?></h1>
 				<?php endif;
