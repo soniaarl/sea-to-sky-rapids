@@ -1,5 +1,6 @@
 // Home page styles
 
+
 .home.page-template-default.page.page-id-20 .site .banner {
     width: 100%;
     margin: 0 auto;
@@ -201,3 +202,18 @@ video {
 
 }
 
+//header
+.custome-logo{
+    width: 50px;
+}
+.site-branding{
+    height: 70px;
+}
+@media(min-width:1000px){
+    .custome-logo{
+        width: 80px;
+    }
+    .site-branding{
+        height: 95px;
+    }
+}

@@ -29,7 +29,10 @@
 	<div class="inner-width">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
+			// the_custom_logo();
+			?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> <img class="custome-logo" src='http://seatoskyrapids.bcitwebdeveloper.ca/wp-content/uploads/2020/06/lasttttt-1.png'>	</a>
+			<?php
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
