@@ -8,6 +8,10 @@
 	main {
         min-height: calc(100vh - 190px);
     }
+
+    h1 {
+        color: $dark_blue;
+    }
 }
 
 .product-name a {
