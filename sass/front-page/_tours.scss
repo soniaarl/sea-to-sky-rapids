@@ -164,16 +164,28 @@ video {
 }
 
 @media (min-width: 720px) {
-
     .video-container { 
         padding-bottom: 0;
-        height: 550px;
+        height: 650px;
         margin: 0 auto;
     } 
     
     video { 
-        height: 550px;
+        height: 650px;
         object-fit: cover;
+    }
+
+    .home-intro-text {
+        margin: 100px auto 0 auto;
+    }
+
+    .page-id-20 {
+        .banner h1 {
+            top: 55%
+        }
+        .book-now-but a {
+            top: 85%;
+        }
     }
 
 }
@@ -208,7 +220,8 @@ video {
 }
 @media(min-width:1000px){
     .custome-logo{
-        width: 80px;
+        padding-top: 10px;
+        width: 55px;
     }
     .site-branding{
         height: 95px;
