@@ -85,6 +85,8 @@ video {
     border-radius: 15px 15px 15px 15px;
     background-color: $color__background-pre;
     box-shadow: 1px 2px 5px #cccccc;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .single-tour-preview{
@@ -111,13 +113,6 @@ video {
     transform: translate(-50%, -50%);
     
 }
-@media(min-width:1000px){
-    
-    .z-sigle-tour-title{
-        min-width:160px ;
-        text-align: center;
-    }
-}
 
 .tours-overlay{
     position: absolute;
@@ -142,7 +137,7 @@ video {
     margin-bottom: 0;
     border-radius: 0 0 15px 15px;
 }
-@media(min-width:600px){
+@media(min-width:850px){
 
 
     .tours-preview{
@@ -178,28 +173,50 @@ video {
 
 }
 
-@media(min-width:1000px){
-    
+@media(min-width: 780px) {
+    .single-tour-preview{
+        max-width: 700px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 
-    .tours-preview{
+    .tours-preview {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 950px;
+        margin: 0 auto;
     }
-
-
-    .single-tour-preview{
-        width: 22%;
-    }
-
-    .single-tour-preview{
-
-        margin-bottom: 40px;
-    }
-
 }
 
-//header
+// @media(min-width:1000px){
+
+//     .tours-preview{
+//         display: flex;
+//         flex-wrap: nowrap;
+//         justify-content: space-around;
+//     }
+
+//     .single-tour-preview{
+//         width: 22%;
+//     }
+
+//     .single-tour-preview{
+
+//         margin-bottom: 40px;
+//     }
+
+// }
+
+@media(min-width:1000px){
+    
+    .z-sigle-tour-title{
+        min-width:160px ;
+        text-align: center;
+    }
+}
+
+// Header
 .custome-logo{
     width: 50px;
 }
@@ -212,5 +229,20 @@ video {
     }
     .site-branding{
         height: 95px;
+    }
+}
+
+@media(min-width: 1500px) {
+    .single-tour-preview{
+        max-width: 350px;
+    }
+
+    .tours-preview {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0;
     }
 }
