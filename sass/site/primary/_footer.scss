@@ -1,13 +1,21 @@
 .site-footer {
 	background-color: $dark_blue;
 	color: #fff;
-	padding: 1.25rem;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-menus {
-	display: flex;
-    
+	display: inline-block;
     justify-content: space-between;
+    width: 100%;
+}
+
+.site-info {
+    display: inline-block;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .footer-navigation {
@@ -16,21 +24,49 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .trip-info {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+        p {
+            margin: 0;
+        }
 }
 
 .trip-info ul {
     list-style: none;
 }
 
+.trip-after {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        p {
+            margin: 0;
+        }
+}
+
 .trip-after a {
     text-decoration: none;
     color: white;
 }
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        p{
+            margin: 0;
+        }
+}
+
+
 
 .menu-footer-menu-container a {
     text-decoration: none;
@@ -42,6 +78,20 @@
 
 }
 
-menu {
+ul.menu {
     margin: 0;
+    padding: 0;
+}
+
+.scroll-top {
+    background: transparent;
+	border: none;
+	padding: 1rem;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+	transition: all ease 0.3s;
+	opacity: 0;
+	
 }

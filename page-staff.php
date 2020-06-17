@@ -35,7 +35,7 @@ get_header();
             $staff_query = new WP_Query( $args );
             if ( $staff_query->have_posts() ): ?>
             	<h2>Meet The Team</h2>
-                <div>
+                <div class="staff-card-group">
                     <?php while ( $staff_query->have_posts() ):
                         $staff_query->the_post() ?>
                         

@@ -1,9 +1,16 @@
+.page-template-default.page.page-id-37 h2 {
+	color: $dark_blue;
+	max-width: 300px;
+	margin: 0 auto;
+	font-size: 25px;
+}
+
 .staff-about p {
 	font-size: 16px;
 	margin: 0 auto;
 	text-align: center;
-	max-width: 700px;
-	padding: 20px 20px 10px;
+	max-width: 800px;
+	padding: 30px 20px 10px;
 }
 
 .staff-card{
@@ -11,29 +18,38 @@
 	border: 2px solid $yellow;
 	margin: 25px auto;
 	text-align: center;
-	max-width: 500px;
+	max-width: 350px;
+	margin-bottom: 30px;
+}
+
+.staff-card p {
+	margin-bottom: 0;
+}
+
+.staff-employee, .staff-hometown, .staff-bio {
+	margin-top: 0;
 }
 
 .staff-card p, h3, img{
 	text-align: center;
-	
 }
 
-
 .staff-card img {
-	padding: 20px 30px 5px;
+	padding: 30px 30px 5px;
+}
+
+.staff-bio {
+	padding: 0 30px 30px 30px;
 }
 
 
 
 
 @media only screen and (min-width: 650px) {
-.staff-about p {
-	font-size: 22px;
-	}
-}
-
-
+// .staff-about p {
+// 	font-size: 22px;
+// 	}
+// }
 
 p.field-label {
 	text-transform: uppercase;
@@ -55,5 +71,44 @@ h3.staff-name {
 .staff-name {
 	letter-spacing: 1px;
 	font-weight: 300;
+}
+
+}
+
+@media (min-width: 1000px) {
+	.page-template-default.page.page-id-37 .slick-track {
+		height: 500px;
+	}
+
+	.staff-card-group {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	.staff-card {
+		margin: 0;
+		margin-right: 15px;
+	}
+
+	.staff-card-group:last-child {
+		margin-right: 0;
+	}
+
+	.page-template-default.page.page-id-37 h2 {
+		max-width: 1100px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.staff-card {
+		max-width: 400px;
+	}
+
+	.page-template-default.page.page-id-37 h2 {
+		max-width: 1250px;
+	}
 }
 
