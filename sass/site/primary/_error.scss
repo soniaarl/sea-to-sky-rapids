@@ -1,6 +1,11 @@
 .error-404.not-found {
+    padding-left: 30px;
+    padding-right: 30px;
     height: 100vh;
     margin: 0 auto;
+    header {
+        margin-top: 102px;
+    }
 }
 
 .error-404.not-found p {
@@ -22,5 +27,11 @@
 @media (min-width: 800px) {
     .error-404.not-found {
         max-width: 720px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .error-404.not-found header {
+            margin-top: 142px;
     }
 }
