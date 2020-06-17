@@ -11,7 +11,7 @@
 	padding-bottom: 56.25%;
 	overflow: hidden;
 	max-width: 100%;
-	height: 400px;
+	height: 550px;
     background-color: $dark_blue;
 } 
 
@@ -23,18 +23,21 @@ video {
 	width: 100%;
     height: 100%;
     opacity: 0.75;
-    height: 400px;
+    height: 550px;
     object-fit: cover;
 }
 
 .banner.home {
     background-color: transparent;
+    height: 550px;
 }
 
 
 .home-intro-text, .page-description{
     text-align: center;
     padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .book-now-but a{
@@ -114,10 +117,7 @@ video {
         min-width:160px ;
         text-align: center;
     }
-
-    
 }
-
 
 .tours-overlay{
     position: absolute;
@@ -144,10 +144,6 @@ video {
 }
 @media(min-width:600px){
 
-    .home-intro-text , .page-description{
-        margin: 5% 10% 3%;
-    }
-
 
     .tours-preview{
         display: flex;
@@ -171,12 +167,12 @@ video {
 
     .video-container { 
         padding-bottom: 0;
-        height: 500px;
+        height: 550px;
         margin: 0 auto;
     } 
     
     video { 
-        height: 500px;
+        height: 550px;
         object-fit: cover;
     }
 
@@ -189,7 +185,6 @@ video {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
-        margin: 5%;
     }
 
 
