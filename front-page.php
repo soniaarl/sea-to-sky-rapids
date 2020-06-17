@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<main id="primary" class=" front-page-site-main">
+<main id="primary" class="site-main">
 
 	<div class="banner home">
 		<?php while ( have_posts() ) : the_post(); ?>

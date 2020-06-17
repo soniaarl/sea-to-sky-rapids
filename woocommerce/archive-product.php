@@ -29,7 +29,7 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content_archive' );
 
 ?>
-<main>
+<main class="site-main">
 <header class="woocommerce-products-header">
 	<div class="banner tours">
 		<?php echo get_the_post_thumbnail(get_option( 'woocommerce_shop_page_id') ); ?>
