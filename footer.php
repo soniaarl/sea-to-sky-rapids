@@ -49,7 +49,7 @@
 	</div><!-- .site-info -->
 
 	<button id="scroll-top" class="scroll-top">
-	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" transform='rotate(270)' >
+	<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" transform='rotate(270)' >
 		<path d="M6.028 0v6.425l5.549 5.575-5.549 5.575v6.425l11.944-12z"/>
 	</svg>
 		<span class="screen-reader-text">Scroll To Top</span>
