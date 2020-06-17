@@ -41,36 +41,36 @@
     object-position: bottom center;
 }
 
-// Home video banner
+// // Home video banner
 
-.home.page-template-default.page.page-id-20 .site .banner {
-    width: 100%;
-  }
+// .home.page-template-default.page.page-id-20 .site .banner {
+//     width: 100%;
+//   }
 
-.video-container { 
-	position: relative; 
-	padding-bottom: 56.25%;
-	overflow: hidden;
-	max-width: 100%;
-	height: 400px;
-    background-color: $dark_blue;
-} 
+// .video-container { 
+// 	position: relative; 
+// 	padding-bottom: 56.25%;
+// 	overflow: hidden;
+// 	max-width: 100%;
+// 	height: 400px;
+//     background-color: $dark_blue;
+// } 
 
 
-video { 
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-    height: 100%;
-    opacity: 0.75;
-    height: 400px;
-    object-fit: cover;
-}
+// video { 
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+//     height: 100%;
+//     opacity: 0.75;
+//     height: 400px;
+//     object-fit: cover;
+// }
 
-.banner.home {
-    background-color: transparent;
-}
+// .banner.home {
+//     background-color: transparent;
+// }
 
 @media (min-width: 400px) {
     .banner h1 {
