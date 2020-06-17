@@ -3,6 +3,13 @@
     margin: 0 auto;
 }
 
+.page-id-145 {
+	margin-top: 72px;
+	main {
+        min-height: calc(100vh - 190px);
+    }
+}
+
 .product-name a {
     text-decoration: none;
     color: #404040;
@@ -180,3 +187,5 @@ tfoot tr, tfoot th {
 .wc-booking-summary-number {
     font-family: $body_font;
 }
+
+
