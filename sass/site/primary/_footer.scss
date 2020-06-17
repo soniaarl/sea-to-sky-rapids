@@ -10,6 +10,10 @@
 	display: inline-block;
     justify-content: space-between;
     width: 100%;
+
+        svg path {
+            fill: white;
+        }
 }
 
 .site-info {
@@ -18,8 +22,9 @@
     width: 100%;
 }
 
+
+
 .footer-navigation {
-    display: flex;
     flex-direction: row;
     width: 100%;
     margin: 0;
@@ -75,7 +80,7 @@
         }
 }
 
-.contact-phone {
+.footer-phone {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,12 +130,19 @@ ul.menu {
     .trip-info,
     .trip-after,
     .footer-contact,
-    .contact-phone {
+    .footer-phone {
         display: flex;
         justify-content: flex-start;
         padding-top: 0;
         
     }
+
+    .menu-social-menu-container ul {
+        display: flex;
+    }
     
+    .footer-menus svg{
+        margin: 5px;
+    }
 
 }

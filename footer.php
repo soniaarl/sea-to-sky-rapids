@@ -25,11 +25,11 @@
 				</div> <!-- end trip-after -->
 				<div class="footer-contact">
 					<p>Connect with us</p>
-					<?php if ( is_page() ) : ?>
+					
 						<nav id="social-navigation" class="social-navigation"></nav>
 						<?php wp_nav_menu(array('theme_location' => 'social'));	?>
 						</div><!-- end footer-contact -->
-						<div class="contact-phone">
+						<div class="footer-phone">
 						<?php
 						if(function_exists( 'get_field') ) :
 							if ( get_field( 'contact_phone_title', 39 ) ) : ?>
@@ -40,20 +40,20 @@
 								<a href="tel:<?php the_field('contact_phone_text', 39)?>"><?php the_field( 'contact_phone_text', 39 ); ?></a>
 							<?php endif; 
 							if ( get_field( 'contact_email_title', 39 ) ) : ?>
-								<?php the_field( 'contact_email_title' ); ?>
+								<?php the_field( 'contact_email_title', 39 ); ?>
 							<?php endif; ?>
 						<?php if ( get_field ( 'contact_email_text', 39) ) : ?>
 							<a href="mailto:<?php the_field('contact_email_text', 39)?>"><?php the_field( 'contact_email_text', 39 ); ?></a>
 						</div>
 						<?php endif; 
 						endif;
-					endif; ?>
 					
-				
+					
+						?>
 			</nav>
 		</div><!-- end footer-navigation-->
 	</div><!-- .site-info -->
-
+	
 	<button id="scroll-top" class="scroll-top">
 	<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" transform='rotate(270)' >
 		<path d="M6.028 0v6.425l5.549 5.575-5.549 5.575v6.425l11.944-12z"/>
