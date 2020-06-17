@@ -1,6 +1,8 @@
 .post-145 {
     max-width: 600px;
     margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .page-id-145 {
@@ -190,6 +192,14 @@ tfoot tr, tfoot th {
 
 .wc-booking-summary-number {
     font-family: $body_font;
+}
+
+@media (min-width: 1000px) {
+
+    .page-id-145 {
+        margin-top: 102px;
+    }
+
 }
 
 

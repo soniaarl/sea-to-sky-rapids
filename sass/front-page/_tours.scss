@@ -34,7 +34,7 @@ video {
 
 .home-intro-text, .page-description{
     text-align: center;
-    margin: 12% 15px;
+    padding: 30px;
 }
 
 .book-now-but a{
@@ -62,6 +62,9 @@ video {
 }
 
 .tours-preview{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
     p{
         color: black;
         line-height: 1;

@@ -5,6 +5,8 @@ abbr[title] {
 #post-122 {
     max-width: 600px;
     margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #post-122 h1.entry-title {
@@ -117,5 +119,11 @@ abbr[title] {
 
 .checkout.woocommerce-checkout input, .checkout.woocommerce-checkout textarea {
     font-family: $body_font;
+}
+
+@media (min-width: 1000px) {
+    #post-122 h1 {
+        margin-top: 50px;
+    }
 }
 

@@ -3,10 +3,9 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     max-width: 1500px;
-    margin-left: -30px;
 }
 
 .banner img {
@@ -14,7 +13,7 @@
     display: block;
     height: 400px;
     object-fit: cover;
-    width: 100vw;
+    width: 100%;
 }
 
 .banner h1 {
@@ -45,8 +44,7 @@
 // Home video banner
 
 .home.page-template-default.page.page-id-20 .site .banner {
-    width: 100vw;
-    margin-left: -30px;
+    width: 100%;
   }
 
 .video-container { 
