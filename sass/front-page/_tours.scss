@@ -72,8 +72,8 @@ video {
 }
 
 .single-tour-preview{
-
-background-color: $color__background-pre;
+    border-radius: 15px 15px 15px 15px;
+    background-color: $color__background-pre;
 
 }
 
@@ -85,18 +85,20 @@ background-color: $color__background-pre;
 .z-single-tour-img{
     background-color: $dark_blue;
     border-bottom: 2px solid $yellow;
+    border-radius: 15px 15px 0 0;
 }
 
 .z-single-tour-img img{
     opacity: 0.75;
     display: block;
+    border-radius: 15px 15px 0 0;
 }
 
 .z-sigle-tour-title{
     position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
 @media(min-width:1000px){
@@ -131,6 +133,7 @@ background-color: $color__background-pre;
     font-family: $heading_font;
     font-size: 22px;
     margin-bottom: 0;
+    border-radius: 0 0 15px 15px;
 }
 @media(min-width:600px){
 
