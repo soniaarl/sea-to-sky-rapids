@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class=" front-page-site-main">
 
 	<div class="banner home">
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -34,9 +34,12 @@ get_header(); ?>
 
 			<!-- Book now link -->
 			<?php $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>
-			<a href=<?php echo $shop_page_url ?>>
-				<p class="book-now-button">Book Now</p>
-			</a>
+			<div class="book-now-but">
+				<a  href=<?php echo $shop_page_url ?>>
+					<p class="book-now-button">Book Now</p>
+				</a>
+			</div>
+			<!-- end of book-now-but -->
 	</div><!-- end home-banner-->
 			<div class="home-intro-text">
 			<?php  the_content(); ?>

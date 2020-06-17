@@ -1,5 +1,6 @@
 // Home page styles
 
+
 .video-container { 
 	position: relative; 
 	padding-bottom: 56.25%;
@@ -8,6 +9,7 @@
 	height: 400px;
     background-color: $dark_blue;
 } 
+
 
 video { 
 	position: absolute;
@@ -25,9 +27,33 @@ video {
 }
 
 
-.home-intro-text{
+.home-intro-text, .page-description{
     text-align: center;
-    margin: 0 15px;
+    margin: 12% 15px;
+}
+
+.book-now-but a{
+    
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 99;
+    color: black;
+    background-color:$yellow ;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content; 
+    padding: 7px 60px;
+
+}
+.book-now-button{
+    margin: 0;
+    font-family: $heading_font;
 }
 
 .tours-preview{
@@ -73,6 +99,17 @@ background-color: $color__background-pre;
   transform: translate(-50%, -50%);
     
 }
+@media(min-width:1000px){
+    
+    .z-sigle-tour-title{
+        min-width:160px ;
+        text-align: center;
+    }
+
+    
+}
+
+
 .tours-overlay{
     position: absolute;
     top: 0%;
@@ -97,8 +134,8 @@ background-color: $color__background-pre;
 }
 @media(min-width:600px){
 
-    .home-intro-text{
-        margin: 0 6%;
+    .home-intro-text , .page-description{
+        margin: 5% 10% 3%;
     }
 
 
@@ -156,5 +193,4 @@ background-color: $color__background-pre;
     }
 
 }
-// adding this for test the github
 
