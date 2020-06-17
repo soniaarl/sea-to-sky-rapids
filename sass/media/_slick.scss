@@ -2,13 +2,12 @@
 .slick-slider
 {
     position: relative;
-    width: 100vw;
-    margin: 0 -30px 0 -30px;
+    width: 100%;
+    margin: 0;
     display: block;
     box-sizing: border-box;
     @media (min-width: 997px){
         height: 500px;
-        width: 100vw;
     }
 
     -webkit-user-select: none;
