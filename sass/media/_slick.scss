@@ -2,13 +2,13 @@
 .slick-slider
 {
     position: relative;
-    width: 99vw;
+    width: 100vw;
     margin: 0 -30px 0 -30px;
     display: block;
     box-sizing: border-box;
     @media (min-width: 997px){
         height: 500px;
-        width: 99vw;
+        width: 100vw;
     }
 
     -webkit-user-select: none;
@@ -22,6 +22,16 @@
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
+
+
+// Home page testimonial
+.page-id-20 {
+    .slick-slider {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 
 .slick-list
 {
