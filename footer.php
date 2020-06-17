@@ -27,23 +27,29 @@
 					<p>Connect with us</p>
 					<?php if ( is_page() ) : ?>
 						<nav id="social-navigation" class="social-navigation"></nav>
-						<?php wp_nav_menu(array('theme_location' => 'social'));	
+						<?php wp_nav_menu(array('theme_location' => 'social'));	?>
+						</div><!-- end footer-contact -->
+						<div class="contact-phone">
+						<?php
 						if(function_exists( 'get_field') ) :
-							if ( get_field( 'contact_phone_title' ) ) : ?>
-								<p><?php the_field( 'contact_phone_title' ); ?></p>
+							if ( get_field( 'contact_phone_title', 39 ) ) : ?>
+							
+								<p><?php the_field( 'contact_phone_title', 39 ); ?></p>
 							<?php endif; ?>
-							<?php if ( get_field ( 'contact_phone_text') ) : ?>
-								<p><a href="tel:<?php the_field('contact_phone_text')?>"><?php the_field( 'contact_phone_text' ); ?></a></p>
+							<?php if ( get_field ( 'contact_phone_text', 39) ) : ?>
+								<a href="tel:<?php the_field('contact_phone_text', 39)?>"><?php the_field( 'contact_phone_text', 39 ); ?></a>
 							<?php endif; 
-							if ( get_field( 'contact_email_title' ) ) : ?>
-								<p><?php the_field( 'contact_email_title' ); ?></p>
+							if ( get_field( 'contact_email_title', 39 ) ) : ?>
+								<?php the_field( 'contact_email_title' ); ?>
 							<?php endif; ?>
-						<?php if ( get_field ( 'contact_email_text') ) : ?>
-							<p><a href="mailto:<?php the_field('contact_email_text')?>"><?php the_field( 'contact_email_text' ); ?></a></p>
+						<?php if ( get_field ( 'contact_email_text', 39) ) : ?>
+							<a href="mailto:<?php the_field('contact_email_text', 39)?>"><?php the_field( 'contact_email_text', 39 ); ?></a>
+						</div>
 						<?php endif; 
 						endif;
 					endif; ?>
-				</div><!-- end footer-contact -->
+					
+				
 			</nav>
 		</div><!-- end footer-navigation-->
 	</div><!-- .site-info -->
