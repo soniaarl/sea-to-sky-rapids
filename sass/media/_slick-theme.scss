@@ -129,6 +129,12 @@
     margin-bottom: 30px;
 }
 
+@media (max-width: 997px){
+    .page-id-20 .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+}
+
 .slick-dots
 {
     position: absolute;
