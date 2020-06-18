@@ -35,10 +35,11 @@ video {
 
 .home-intro-text, .page-description{
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
     max-width: 800px;
     margin: 0 auto;
 }
+
 
 .book-now-but a {
     
@@ -168,8 +169,8 @@ video {
 }
 @media(min-width:850px){
 
-    .home-intro-text p {
-        font-size: 20px;
+    .home-intro-text p, .page-description p {
+        font-size: 18px;
     }
 
     .z-sigle-tour-title {
@@ -292,7 +293,7 @@ video {
 }
 
 @media(min-width: 1500px) {
-    .home-intro-text {
+    .home-intro-text, .page-description {
         padding: 65px 0 65px 0;
     }
 
