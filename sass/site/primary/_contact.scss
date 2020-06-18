@@ -5,16 +5,12 @@
 	padding-right: 30px;
 }
 
-.contact-book-online h2:hover, .contact-faq h2:hover, .contact-social a svg:hover,
-.contact-book-online h2:focus, .contact-faq h2:focus, .contact-social a svg:focus {
-	transition: all .3s ease-in-out; 
-	transform: scale(1.04); 	
+.site-main.contact h2 a:hover, .site-main.contact p a:hover {
+	color: $yellow;
 }
 
-.contact-email-title p:hover, .contact-phone p:hover,
-.contact-email-title p:focus, .contact-phone p:focus { 
-	transition: all .3s ease-in-out; 
-	transform: scale(1.02); 
+.contact-social a svg path:hover {
+    fill: $yellow;
 }
 
 .acf-map {
