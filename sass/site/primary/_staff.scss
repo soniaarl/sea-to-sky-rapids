@@ -77,12 +77,6 @@ h3.staff-name {
 
 }
 
-@media (min-width: 780px) {
-	.staff-about p {
-		max-width: 950px;
-	}
-}
-
 
 @media (min-width: 1000px) {
 	.page-template-default.page.page-id-37 .slick-track {
@@ -115,10 +109,6 @@ h3.staff-name {
 	}
 
 	.page-template-default.page.page-id-37 h2 {
-		max-width: 1300px;
-	}
-
-	.staff-about p {
 		max-width: 1300px;
 	}
 }
