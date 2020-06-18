@@ -40,10 +40,6 @@ video {
     margin: 0 auto;
 }
 
-.home-intro-text p {
-    font-size: 20px;
-}
-
 .book-now-but a {
     
     position: absolute;
@@ -171,6 +167,11 @@ video {
     transition: 0.5s ease;
 }
 @media(min-width:850px){
+
+    .home-intro-text p {
+        font-size: 20px;
+    }
+
     .z-sigle-tour-title {
         font-size: 35px;
         top: 18%;
@@ -225,6 +226,8 @@ video {
 }
 
 @media(min-width: 780px) {
+
+    
     .single-tour-preview{
         max-width: 700px;
         margin-right: 10px;
@@ -289,6 +292,10 @@ video {
 }
 
 @media(min-width: 1500px) {
+    .home-intro-text {
+        padding: 65px 0 65px 0;
+    }
+
     .single-tour-preview {
         max-width: 350px;
     }
