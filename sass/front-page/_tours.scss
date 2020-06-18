@@ -228,6 +228,10 @@ video {
     }
 }
 
+.home.page-template-default.page.page-id-20 footer {
+    margin-top: 30px;
+}
+
 // @media(min-width:1000px){
 
 //     .tours-preview{
@@ -284,5 +288,11 @@ video {
         max-width: 1500px;
         margin: 0 auto;
         padding: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .home.page-template-default.page.page-id-20 footer {
+        margin-top: 60px;
     }
 }
