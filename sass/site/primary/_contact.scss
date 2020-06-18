@@ -5,6 +5,14 @@
 	padding-right: 30px;
 }
 
+.site-main.contact h2 a:hover, .site-main.contact p a:hover {
+	color: $yellow;
+}
+
+.contact-social a svg path:hover {
+    fill: $yellow;
+}
+
 .acf-map {
 	width: 100vw;
     height: 400px;
@@ -100,6 +108,11 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 	width: 150px;
 	padding-top: 15px;
 	font-size: 18px;
+
+	&:hover {
+		background-color: $yellow;
+		border: none;
+	}
 }
 
 div.wpforms-container-full .wpforms-form .wpforms-field {
@@ -194,7 +207,7 @@ div.wpforms-container-full .wpforms-form .wpforms-one-half {
 @media (min-width: 800px) {
 
 	.contact-main-content {
-		max-width: 800px;
+		max-width: 1000px;
 		margin: 0 auto;
 	}
 

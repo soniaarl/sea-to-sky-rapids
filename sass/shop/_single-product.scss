@@ -1,9 +1,9 @@
-.product-summary, .postid-237 .book-btn, .overview-paragraph, .highlights, .whats-included, .itinerary, .book-trip, form.cart, .postid-237 .faq-btn{
+.product-summary, .single-product .book-btn, .overview-paragraph, .highlights, .whats-included, .itinerary, .book-trip, form.cart, .single-product .faq-btn{
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
-.postid-237 .faq-btn {
+.single-product .faq-btn {
 	max-width: 800px;
 	margin: 0 auto;
 	margin-bottom: 40px;
@@ -165,8 +165,9 @@
 
 	// Book Now CTA
 	.book-btn {
-		margin: 30px 0;
+		margin: 30px auto;
 		text-align: center;
+		max-width: 800px;
 		a {
 		text-decoration: none;
 		color: black;

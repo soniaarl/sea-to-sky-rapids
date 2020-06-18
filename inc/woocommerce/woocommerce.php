@@ -242,12 +242,13 @@ add_action('init' , 'remove_result_count_init');
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/smiley.png);
-		height: 171.4px;
-		width: 320px;
-		background-size: 320px 171.4px;
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/sts-logo.png);
+		height: 150px;
+		width: 180px;
+		background-size: 180px 150px;
 		background-repeat: no-repeat;
-        padding-bottom: 30px;
+		padding-bottom: 30px;
+		margin: 0 auto;
         }
 	</style>
 	<h1 class="login-title">Welcome to Sea to Sky Rapids</h1>

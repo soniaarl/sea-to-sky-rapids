@@ -6,23 +6,48 @@
         filter: brightness(50%);
         width: 100%;
         margin-top: 30px;
-        @media (min-width: 997px){
-        height: 500px;
+        height: 300px;
         object-fit: cover;
-        }
     }
     blockquote {
         position: absolute;
-        top: 45%;
+        top: 50%;
         right: 43%;
         transform: translate(50%, -50%);
         color: white;
-        font-size: 3vw;
+        font-size: 5vw;
         font-weight: normal;
         width: 80%;
-        @media (min-width: 750px){
-            font-size: 22.5px;
+        @media (min-width: 360px){
+            font-size: 18px;
         }
+        
     }
     
+}
+
+@media (min-width: 997px){
+.testimonial-container {
+    img {
+        height: 400px;
+    }
+    blockquote {
+        top: 40%;
+        right: 45%;
+    }
+}
+
+@media (min-width: 1200px){
+    .testimonial-container {
+        img {
+            height: 500px;
+        }
+        blockquote {
+            max-width: 800px;
+            top: 40%;
+            right: 50%;
+        }
+    }
+}
+
 }

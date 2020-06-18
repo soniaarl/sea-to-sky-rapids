@@ -40,25 +40,30 @@ video {
     margin: 0 auto;
 }
 
-.book-now-but a{
+.book-now-but a {
     
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-    width: 80%;
+    width: 228px;
     text-align: center;
     font-size: 2rem;
     z-index: 99;
     color: black;
     background-color:$yellow ;
     text-decoration: none;
-    width: fit-content;
-    height: fit-content; 
     padding: 7px 60px;
+    transition: all .3s ease-in-out; 
 
+    &:hover, &:focus {
+        transition: all .3s ease-in-out; 
+        font-size: 2.2em;
+        width: 248px;
+    }
 }
+
 .book-now-button{
     margin: 0;
     font-family: $heading_font;
@@ -85,6 +90,20 @@ video {
     border-radius: 15px 15px 15px 15px;
     background-color: $color__background-pre;
     box-shadow: 1px 2px 5px #cccccc;
+    margin: 0 auto;
+    max-width: 600px;
+    transition: 0.5s ease;
+
+    &:hover, &:focus {
+        transition: all .3s ease-in-out; 
+        transform: scale(1.005);
+        .tour-more-info-button p {
+            background-color: $yellow;
+        } 
+        p.tour-details-button {
+            color: black;
+        }
+    }
 }
 
 .single-tour-preview{
@@ -109,13 +128,17 @@ video {
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-}
-@media(min-width:1000px){
-    
-    .z-sigle-tour-title{
-        min-width:160px ;
-        text-align: center;
+    font-size: 35px;
+    width: 60%;
+    text-align: center;
+    @media (min-width: 500px){
+        top: 20%;  
+    }
+    @media(min-width: 600px) {
+        font-size: 45px;
+    }
+    @media(min-width: 800px) {
+        font-size: 55px;
     }
 }
 
@@ -134,16 +157,27 @@ video {
     color: white;
     text-align: center;
     background-color: $dark_blue;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     // font-weight: bolder;
     font-family: $heading_font;
     font-size: 22px;
     margin-bottom: 0;
     border-radius: 0 0 15px 15px;
+    transition: 0.5s ease;
 }
-@media(min-width:600px){
+@media(min-width:850px){
 
+    .home-intro-text p {
+        font-size: 20px;
+    }
+
+    .z-sigle-tour-title {
+        font-size: 35px;
+        top: 18%;
+        width: 100%;
+        text-align: center;
+    }
 
     .tours-preview{
         display: flex;
@@ -167,39 +201,80 @@ video {
 
     .video-container { 
         padding-bottom: 0;
-        height: 550px;
+        height: 700px;
         margin: 0 auto;
     } 
     
     video { 
-        height: 550px;
+        height: 700px;
         object-fit: cover;
     }
 
+    .home-intro-text {
+        margin: 140px auto 0 auto;
+    }
+
+    .page-id-20 {
+        .banner h1 {
+            top: 55%
+        }
+        .book-now-but a {
+            top: 85%;
+        }
+    }
+
 }
+
+@media(min-width: 780px) {
+
+    
+    .single-tour-preview{
+        max-width: 700px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .tours-preview {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 950px;
+        margin: 0 auto;
+    }
+}
+
+.home.page-template-default.page.page-id-20 footer {
+    margin-top: 30px;
+}
+
+// @media(min-width:1000px){
+
+//     .tours-preview{
+//         display: flex;
+//         flex-wrap: nowrap;
+//         justify-content: space-around;
+//     }
+
+//     .single-tour-preview{
+//         width: 22%;
+//     }
+
+//     .single-tour-preview{
+
+//         margin-bottom: 40px;
+//     }
+
+// }
 
 @media(min-width:1000px){
     
-
-    .tours-preview{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
+    .z-sigle-tour-title{
+        min-width:160px ;
+        text-align: center;
     }
-
-
-    .single-tour-preview{
-        width: 22%;
-    }
-
-    .single-tour-preview{
-
-        margin-bottom: 40px;
-    }
-
 }
 
-//header
+// Header
 .custome-logo{
     width: 50px;
 }
@@ -208,9 +283,35 @@ video {
 }
 @media(min-width:1000px){
     .custome-logo{
-        width: 80px;
+        width: 55px;
+        padding-top: 10px;
     }
     .site-branding{
         height: 95px;
+    }
+}
+
+@media(min-width: 1500px) {
+    .home-intro-text {
+        padding: 65px 0 65px 0;
+    }
+
+    .single-tour-preview {
+        max-width: 350px;
+    }
+
+    .tours-preview {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .home.page-template-default.page.page-id-20 footer {
+        margin-top: 60px;
     }
 }
