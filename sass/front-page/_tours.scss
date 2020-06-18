@@ -6,6 +6,10 @@
     margin: 0 auto;
   }
 
+.home-intro-text p, .page-description p {
+    font-size: 18px;
+}
+
 .video-container { 
 	position: relative; 
 	padding-bottom: 56.25%;
@@ -168,10 +172,6 @@ video {
     transition: 0.5s ease;
 }
 @media(min-width:850px){
-
-    .home-intro-text p, .page-description p {
-        font-size: 18px;
-    }
 
     .z-sigle-tour-title {
         font-size: 35px;
