@@ -28,10 +28,10 @@
 	<header id="masthead" class="site-header">
 	<div class="inner-width">
 		<div class="site-branding">
-			<?php
-			// the_custom_logo();
-			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> <img class="custome-logo" src='http://seatoskyrapids.bcitwebdeveloper.ca/wp-content/uploads/2020/06/lasttttt-1.png'>	</a>
+		
+
+			
+			<a  href=" <?php echo esc_url( home_url( '/' ) ); ?>"> <div class="custome-logo"><?php the_custom_logo(); ?></div> </a>
 			<?php
 			if ( is_front_page() && is_home() ) :
 				?>
