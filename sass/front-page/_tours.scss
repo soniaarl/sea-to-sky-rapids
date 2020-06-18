@@ -40,6 +40,10 @@ video {
     margin: 0 auto;
 }
 
+.home-intro-text p {
+    font-size: 20px;
+}
+
 .book-now-but a {
     
     position: absolute;
@@ -128,9 +132,17 @@ video {
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 7vw;
+    font-size: 35px;
+    width: 60%;
+    text-align: center;
     @media (min-width: 500px){
         top: 20%;  
+    }
+    @media(min-width: 600px) {
+        font-size: 45px;
+    }
+    @media(min-width: 800px) {
+        font-size: 55px;
     }
 }
 
@@ -226,6 +238,10 @@ video {
         max-width: 950px;
         margin: 0 auto;
     }
+
+    .home-intro-text, .page-description {
+        max-width: 950px;
+    }
 }
 
 .home.page-template-default.page.page-id-20 footer {
@@ -277,7 +293,7 @@ video {
 }
 
 @media(min-width: 1500px) {
-    .single-tour-preview{
+    .single-tour-preview {
         max-width: 350px;
     }
 
@@ -288,6 +304,10 @@ video {
         max-width: 1500px;
         margin: 0 auto;
         padding: 0;
+    }
+
+    .home-intro-text, .page-description {
+        max-width: 1500px;
     }
 }
 
