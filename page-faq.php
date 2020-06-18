@@ -27,21 +27,23 @@ get_header(); ?>
 		<?php // check if the repeater field has rows of data
 		if( have_rows('faqs') ) :
 			while( have_rows('faqs') ): the_row();
-				echo "<h3>";
-					the_sub_field('category');
-				echo "</h3>";
-		if( have_rows('questions_answers') ):
-			while( have_rows('questions_answers') ): the_row();
- 				if( get_sub_field('question') && get_sub_field('answer') ) :
-					echo "<button class='accordion'>";
-						the_sub_field('question');
-					echo "</button>";					
-					echo "<p class = 'panel'>";
-						the_sub_field('answer');
-					echo "</p>";					
-				endif;	  
-			endwhile;
-		endif;
+					echo "<h3>";
+						the_sub_field('category');
+					echo "</h3>";
+				if( have_rows('questions_answers') ):
+					while( have_rows('questions_answers') ): the_row();
+						echo "<div class='question-box'>";
+							if( get_sub_field('question') && get_sub_field('answer') ) :
+								echo "<button class='accordion'>";
+									the_sub_field('question');
+								echo "</button>";					
+								echo "<p class = 'panel'>";
+									the_sub_field('answer');
+								echo "</p>";					
+							endif;
+						echo "</div>"; // end question-box	  
+					endwhile;
+				endif;
 			endwhile;
 		endif;
 	endwhile; ?>
