@@ -30,6 +30,15 @@
 		text-align: right;
 	}
 
+	.main-navigation a {
+		font-size: 18px;
+		padding: 10px 0;
+		&:hover, &:focus {
+			color: $yellow;
+		}
+	}
+
+
 	// Hamburger button
 	.button-line {
 		background-color: white;
@@ -60,9 +69,9 @@
 			height: 100%;
 		}
 		.nav-menu {
-			height: 160px;
+			height: 100%;
 			width: 100%; 
-			position: fixed;
+			// position: fixed;
 			margin-top: 72px;
 			z-index: 101; 
 			top: 0; 
@@ -181,6 +190,12 @@
 	.site-header {
 		.menu-toggle {
 			display: none;
+		}
+
+		.main-navigation a {
+			font-size: 16px;
+			padding: 0;
+
 		}
 		
 		.main-navigation a:hover {
