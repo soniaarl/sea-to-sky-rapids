@@ -128,7 +128,10 @@ video {
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    font-size: 7vw;
+    @media (min-width: 500px){
+        top: 20%;  
+    }
 }
 
 .tours-overlay{
@@ -156,7 +159,12 @@ video {
     transition: 0.5s ease;
 }
 @media(min-width:850px){
-
+    .z-sigle-tour-title {
+        font-size: 35px;
+        top: 18%;
+        width: 100%;
+        text-align: center;
+    }
 
     .tours-preview{
         display: flex;
