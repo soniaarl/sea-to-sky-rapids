@@ -1,7 +1,7 @@
 <?php
 	$args = array(
 	'post_type'		 =>'product',
-	'posts_per_page' => 4
+	'posts_per_page' => 15
 		); 
 
 	$product_query = new WP_Query($args); 
