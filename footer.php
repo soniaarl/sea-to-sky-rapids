@@ -40,16 +40,13 @@
 								<a href="tel:<?php the_field('contact_phone_text', 39)?>"><?php the_field( 'contact_phone_text', 39 ); ?></a>
 							<?php endif; 
 							if ( get_field( 'contact_email_title', 39 ) ) : ?>
-								<?php the_field( 'contact_email_title', 39 ); ?>
+								<p><?php the_field( 'contact_email_title', 39 ); ?></p>
 							<?php endif; ?>
 						<?php if ( get_field ( 'contact_email_text', 39) ) : ?>
 							<a href="mailto:<?php the_field('contact_email_text', 39)?>"><?php the_field( 'contact_email_text', 39 ); ?></a>
 						</div>
 						<?php endif; 
-						endif;
-					
-					
-						?>
+						endif;?>
 			</nav>
 		</div><!-- end footer-navigation-->
 	</div><!-- .site-info -->

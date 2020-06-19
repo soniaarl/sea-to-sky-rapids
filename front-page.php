@@ -18,7 +18,6 @@ get_header(); ?>
 	<div class="banner home">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if ( function_exists ( 'get_field' ) ) :
-				// the_post_thumbnail('full');
 
 				if ( get_field( 'banner_video' ) ) : ?>
 					<div class="video-container">
@@ -41,13 +40,15 @@ get_header(); ?>
 			</div>
 			<!-- end of book-now-but -->
 	</div><!-- end home-banner-->
-			<div class="home-intro-text">
-			<?php  the_content(); ?>
-			</div>
-			<!-- end of home-intro-text -->
-			<?php
-			get_template_part ( 'template-parts/content-our-tours' );
-			get_template_part( 'template-parts/testimonials' ); 
+
+	<div class="home-intro-text">
+		<?php  the_content(); ?>
+	</div>
+	<!-- end of home-intro-text -->
+	
+	<?php
+	get_template_part ( 'template-parts/content-our-tours' );
+	get_template_part( 'template-parts/testimonials' ); 
 			
 		endwhile; ?>
 			</main><!-- #main -->

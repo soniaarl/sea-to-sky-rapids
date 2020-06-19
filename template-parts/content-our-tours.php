@@ -16,7 +16,7 @@
 					<?php the_post_thumbnail('full'); ?>
 				</div>
 				<div class="tours-overlay"></div>
-				<h2 class='z-sigle-tour-title'><?php the_title(); ?></h2>
+				<h2 class='z-single-tour-title'><?php the_title(); ?></h2>
 	
 				<?php // support for ACF
 				if ( function_exists( 'get_field' ) ) :

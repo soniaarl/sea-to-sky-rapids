@@ -53,30 +53,28 @@
 
 @media only screen and (min-width: 650px) {
 
-p.field-label {
-	text-transform: uppercase;
+	p.field-label {
+		text-transform: uppercase;
+	}
+
+	.field-label p {
+		margin: 0;
+	}
+
+	p.staff-position {
+		margin: 0 ;
+	}
+
+	h3.staff-name {
+		margin-bottom: 0;
+	}
+
+	.staff-name {
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
 
 }
-
-.field-label p {
-	margin: 0;
-}
-
-p.staff-position {
-	margin: 0 ;
-}
-
-h3.staff-name {
-	margin-bottom: 0;
-}
-
-.staff-name {
-	letter-spacing: 1px;
-	font-weight: 300;
-}
-
-}
-
 
 @media (min-width: 1000px) {
 	.page-template-default.page.page-id-37 .slick-track {

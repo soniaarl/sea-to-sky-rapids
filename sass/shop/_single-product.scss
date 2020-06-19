@@ -1,4 +1,4 @@
-.product-summary, .single-product .book-btn, .overview-paragraph, .highlights, .whats-included, .itinerary, .book-trip, form.cart, .single-product .faq-btn{
+.product-summary, .single-product .book-btn, .overview-paragraph, .highlights, .whats-included, .itinerary, .book-trip, form.cart, .single-product .faq-btn {
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -161,8 +161,6 @@
 		}
 	}
 
-	
-
 	// Book Now CTA
 	.book-btn {
 		margin: 30px auto;
@@ -186,8 +184,6 @@
 			background-color: lighten($yellow, 10%);
 		}
 	}
-
-
 
 	// List Styles
 	.highlights, .gear, .lunch, .morning-trip, .afternoon-trip {

@@ -1,4 +1,3 @@
-
 .site-header {
 	position: fixed;
 	top: 0;
@@ -38,7 +37,6 @@
 		}
 	}
 
-
 	// Hamburger button
 	.button-line {
 		background-color: white;
@@ -71,7 +69,6 @@
 		.nav-menu {
 			height: 100%;
 			width: 100%; 
-			// position: fixed;
 			margin-top: 72px;
 			z-index: 101; 
 			top: 0; 
@@ -101,13 +98,19 @@
 			overflow: hidden;
 		}
 	}
-	
 }
 
+// Header
+
+.custome-logo{
+    width: 50px;
+}
+.site-branding{
+    height: 70px;
+}
 
 .main-navigation {
 	display: block;
-
 
 	ul {
 		display: none;
@@ -138,14 +141,6 @@
 			a {
 				width: 200px;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -156,21 +151,11 @@
 
 	li {
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
 	}
 }
 
@@ -186,6 +171,28 @@
 	top: 0;
 }
 
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
 @media screen and (min-width: 700px) {
 	.site-header {
 		.menu-toggle {
@@ -198,8 +205,9 @@
 
 		}
 		
-		.main-navigation a:hover {
+		.main-navigation a:hover, .main-navigation a:focus {
 			border-bottom: 1px solid $yellow;
+			color: white;
 		}
 
 		.main-navigation ul {
@@ -227,24 +235,12 @@
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
+@media(min-width:1000px){
+    .custome-logo{
+        width: 55px;
+        padding-top: 10px;
+    }
+    .site-branding{
+        height: 95px;
+    }
 }

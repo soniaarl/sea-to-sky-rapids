@@ -15,7 +15,6 @@
     border: none;
     outline: none;
     transition: 0.4s;
-    // margin-bottom: 10px;
     border-radius: 0;
 }
 
@@ -57,7 +56,6 @@ button.accordion {
   font-size: 18px;
   background-color: $light_blue;
   color: $dark_blue;
-  // margin-bottom: 10px;
   letter-spacing: 3px;
   line-height: 18px;
 }
@@ -79,13 +77,13 @@ button.accordion {
 
 @media only screen and (min-width: 720px){
 
-.faq-page .accordion {
-  font-size: 1.1em;
-}
+  .faq-page .accordion {
+    font-size: 1.1em;
+  }
 
-.site .faq-page {
-  max-width: 70%;
-  margin: 0 auto;
-}
+  .site .faq-page {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 
 }

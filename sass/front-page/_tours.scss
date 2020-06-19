@@ -1,6 +1,5 @@
 // Home page styles
 
-
 .home.page-template-default.page.page-id-20 .site .banner {
     width: 100%;
     margin: 0 auto;
@@ -19,7 +18,6 @@
     background-color: $dark_blue;
 } 
 
-
 video { 
 	position: absolute;
 	top: 0;
@@ -36,7 +34,6 @@ video {
     height: 550px;
 }
 
-
 .home-intro-text, .page-description{
     text-align: center;
     padding: 40px 20px;
@@ -44,9 +41,7 @@ video {
     margin: 0 auto;
 }
 
-
 .book-now-but a {
-    
     position: absolute;
     top: 80%;
     left: 50%;
@@ -87,6 +82,7 @@ video {
         color: white;
     }
 }
+
 .tour-details-button p{
     color: white;
 }
@@ -128,7 +124,7 @@ video {
     border-radius: 15px 15px 0 0;
 }
 
-.z-sigle-tour-title{
+.z-single-tour-title{
     position: absolute;
     top: 15%;
     left: 50%;
@@ -136,15 +132,6 @@ video {
     font-size: 35px;
     width: 60%;
     text-align: center;
-    @media (min-width: 500px){
-        top: 20%;  
-    }
-    @media(min-width: 600px) {
-        font-size: 45px;
-    }
-    @media(min-width: 800px) {
-        font-size: 55px;
-    }
 }
 
 .tours-overlay{
@@ -155,47 +142,38 @@ video {
     background-color: black;
     z-index: 20000;
 }
+
 .single-tour-detailed-info{
     padding-left: 10%;
 }
+
 .tour-more-info-button p {
     color: white;
     text-align: center;
     background-color: $dark_blue;
     padding-top: 15px;
     padding-bottom: 15px;
-    // font-weight: bolder;
     font-family: $heading_font;
     font-size: 22px;
     margin-bottom: 0;
     border-radius: 0 0 15px 15px;
     transition: 0.5s ease;
 }
-@media(min-width:850px){
 
-    .z-sigle-tour-title {
-        font-size: 35px;
-        top: 18%;
-        width: 100%;
-        text-align: center;
+.home.page-template-default.page.page-id-20 footer {
+    margin-top: 30px;
+}
+
+@media (min-width: 500px) {
+    .z-single-tour-title{
+        top: 20%;  
     }
+}
 
-    .tours-preview{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+@media(min-width: 600px) {
+    .z-single-tour-title{
+        font-size: 45px;
     }
-
-
-    .single-tour-preview{
-        width: 44%;
-    }
-
-    .single-tour-preview{
-
-        margin-bottom: 40px;
-    }
-
 }
 
 @media (min-width: 720px) {
@@ -223,12 +201,10 @@ video {
             top: 85%;
         }
     }
-
 }
 
 @media(min-width: 780px) {
 
-    
     .single-tour-preview{
         max-width: 700px;
         margin-right: 10px;
@@ -244,51 +220,33 @@ video {
     }
 }
 
-.home.page-template-default.page.page-id-20 footer {
-    margin-top: 30px;
+@media(min-width:850px){
+
+    .z-single-tour-title {
+        font-size: 35px;
+        top: 18%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .single-tour-preview{
+        width: 44%;
+    }
+
+    .single-tour-preview{
+        margin-bottom: 40px;
+    }
 }
-
-// @media(min-width:1000px){
-
-//     .tours-preview{
-//         display: flex;
-//         flex-wrap: nowrap;
-//         justify-content: space-around;
-//     }
-
-//     .single-tour-preview{
-//         width: 22%;
-//     }
-
-//     .single-tour-preview{
-
-//         margin-bottom: 40px;
-//     }
-
-// }
 
 @media(min-width:1000px){
     
-    .z-sigle-tour-title{
+    .z-single-tour-title{
         min-width:160px ;
         text-align: center;
     }
-}
 
-// Header
-.custome-logo{
-    width: 50px;
-}
-.site-branding{
-    height: 70px;
-}
-@media(min-width:1000px){
-    .custome-logo{
-        width: 55px;
-        padding-top: 10px;
-    }
-    .site-branding{
-        height: 95px;
+    .home.page-template-default.page.page-id-20 footer {
+        margin-top: 60px;
     }
 }
 
@@ -302,17 +260,8 @@ video {
     }
 
     .tours-preview {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         max-width: 1500px;
-        margin: 0 auto;
         padding: 0;
-    }
-}
-
-@media (min-width: 1000px) {
-    .home.page-template-default.page.page-id-20 footer {
-        margin-top: 60px;
     }
 }
