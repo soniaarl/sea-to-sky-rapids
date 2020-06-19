@@ -10,10 +10,14 @@
     margin-top: 50px;
 }
 
-.woocommerce-MyAccount-navigation ul li a {
+.woocommerce-MyAccount-navigation ul li a, table.shop_table.my_account_bookings td a {
     text-decoration: none;
     color: $dark_blue;
     font-weight: 700;
+}
+
+table.shop_table.my_account_bookings th td {
+    width: 100%;
 }
 
 @media screen and (min-width: 48em) {
