@@ -3,7 +3,7 @@
     margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
-
+    height: 100vh;
 }
 
 #post-123 h1 {
@@ -16,8 +16,8 @@
     font-weight: 700;
 }
 
-table.shop_table.my_account_bookings th td {
-    width: 100%;
+table.shop_table.my_account_bookings th, table.shop_table.my_account_bookings td {
+    margin-right: 10px;
 }
 
 @media screen and (min-width: 48em) {
