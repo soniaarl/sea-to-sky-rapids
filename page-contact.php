@@ -113,14 +113,10 @@ get_header(); ?>
 
 				<div class="contact-social">
 				<h2>Connect with us</h2>
-				<p>From the social menu:</p>
-				<?php wp_nav_menu(array('theme_location' => 'social'));	?>
-				<p>From the images folder:</p>
 				<?php if ( have_rows ('social') ) :
 					while( have_rows( 'social' ) ): the_row();
 						if ( get_sub_field( 'social_link' ) && get_sub_field('social_platform') ) : ?>
 						<a href="<?php the_sub_field('social_link') ?>" target="_blank"><?php get_template_part( './images/'.get_sub_field('social_platform', 39).''); ?></a>
-						<?php echo get_sub_field('social_platform', 39);?>
 						<?php endif; ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
