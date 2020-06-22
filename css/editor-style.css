@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'American-Captain';
+    src: url('../fonts/American-Captain.otf'),
+         url('../fonts/American-Captain.ttf')
+}
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('../fonts/FuturaPTBook.otf')
+}
+
+.block-editor__typewriter h1, .block-editor__typewriter h2, .block-editor__typewriter h3, .block-editor__typewriter h4, .editor-post-title__block .editor-post-title__input {
+    font-family: 'American-Captain';
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #00303f;
+}
+
+.block-editor__typewriter p {
+    font-family: 'FuturaPT';
+}
